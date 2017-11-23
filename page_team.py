@@ -1,6 +1,7 @@
 # coding: utf8
 
 from collections import OrderedDict
+import operator
 
 def get_fr_to_en(status):
   lang = u'EN'
@@ -34,7 +35,9 @@ def get_fr_to_en(status):
     else : return "ERRROORORRR"
     
 admin = [
-  { u'nom' : u'Arnaud de la Fortelle',
+  {
+    u'prenom' : u'Arnaud',
+    u'nom' : u'de la Fortelle',
     u'status' : u'Professeur, Directeur',
     u'mail' : u'arnaud.de_la_fortelle@mines-paristech.fr',
     u'tel' : u'+33140519408',
@@ -43,7 +46,8 @@ admin = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/arnaud.de_la_fortelle.jpg',
     u'linkedin' : u'https://www.linkedin.com/in/arnaud-de-la-fortelle-353ba15/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
-  { u'nom' : u"Brigitte d'Andrea-Novel",
+  { u'nom' : u"d'Andrea-Novel",
+    u'prenom' : u'Brigitte',
     u'status' : u'Prof., Resp. Enseignement',
     u'mail' : u'brigitte.dandrea-novel@mines-paristech.fr',
     u'tel' : u'+33140519094',
@@ -52,7 +56,8 @@ admin = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/b/brigitte.dandrea-novel.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   },
-  { u'nom' : u'Arthur Gaudron',
+  { u'nom' : u'Gaudron',
+    u'prenom' : u'Arthur',
     u'status' : u'Resp. de Projets',
     u'mail' : u'arthur.gaudron@mines-paristech.fr',
     u'tel' : u'+33140519127',
@@ -61,7 +66,8 @@ admin = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/arthur.gaudron.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   },
-  { u'nom' : u'Christine Vignaud',
+  { u'nom' : u'Vignaud',
+    u'prenom' : u'Christine',
     u'status' : u'Assistante',
     u'mail' : u'christine.vignaud@mines-paristech.fr',
     u'tel' : u'+33140519255',
@@ -70,7 +76,8 @@ admin = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/c/christine.vignaud.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   },
-  { u'nom' : u'Christophe Kotfila',
+  { u'nom' : u'Kotfila',
+    u'prenom' : u'Christophe',
     u'status' : u'Assistant',
     u'mail' : u'christophe.kotfila@mines-paristech.fr',
     u'tel' : u'+33140519354',
@@ -79,7 +86,8 @@ admin = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Myriam Cailloux-Roques',
+    u'nom' : u'Cailloux-Roques',
+    u'prenom' : u'Myriam',
     u'status' : u'Chargée Adm. Mastère MISL',
     u'mail' : u'myriam.cailloux-roques@mines-paristech.fr',
     u'tel' : u'+33140519122',
@@ -91,8 +99,9 @@ admin = [
 ]
 teacher = [
   {
-    u'nom' : u'Philippe Fuchs',
+    u'nom' : u'Fuchs',
     u'status' : u'Professeur',
+    u'prenom' : u'Philippe',
     u'mail' : u'philippe.fuchs@mines-paristech.fr',
     u'tel' : u'+33140519230',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/philippe-fuchs',
@@ -100,8 +109,9 @@ teacher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/p/philippe.fuchs.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'François Goulette',
+    u'nom' : u'Goulette',
     u'status' : u'Professeur',
+    u'prenom' : u'François',
     u'mail' : u'francois.goulette@mines-paristech.fr',
     u'tel' : u'+33140519235',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/francois-goulette',
@@ -109,7 +119,8 @@ teacher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/f/francois.goulette.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Fabien Moutarde',
+    u'nom' : u'Moutarde',
+    u'prenom' : u'Fabien',
     u'status' : u'Professeur',
     u'mail' : u'fabien.moutarde@mines-paristech.fr',
     u'tel' : u'+33140519292',
@@ -119,7 +130,8 @@ teacher = [
     u'linkedin' : u'https://www.linkedin.com/in/fabien-moutarde-b9990bb/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Silvère Bonnabel',
+    u'nom' : u'Bonnabel',
+    u'prenom' : u'Silvère',
     u'status' : u'Professeur',
     u'mail' : u'silvere.bonnabel@mines-paristech.fr',
     u'tel' : u'+33140519119',
@@ -128,7 +140,8 @@ teacher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/s/silvere.bonnabel.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Lionel ROSIER',
+    u'nom' : u'ROSIER',
+    u'prenom' : u'Lionel',
     u'status' : u'Professeur',
     u'mail' : u'lionel.rosier@mines-paristech.fr',
     u'tel' : u'+33140519010',
@@ -137,7 +150,8 @@ teacher = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/Lionel.Rosier.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Sébastien Boisgerault',
+    u'nom' : u'Boisgerault',
+    u'prenom' : u'Sébastien',
     u'status' : u'Maître de Conférences',
     u'mail' : u'sebastien.boisgerault@mines-paristech.fr',
     u'tel' : u'+33140519359',
@@ -146,7 +160,8 @@ teacher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/s/sebastien.boisgerault.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'https://github.com/boisgera',u'vimeo' : u''},
   {
-    u'nom' : u'Jean-Emmanuel Deschaud',
+    u'nom' : u'Deschaud',
+    u'prenom' : u'Jean-Emmanuel',
     u'status' : u'Maître de Conférences',
     u'mail' : u'jean-emmanuel.deschaud@mines-paristech.fr',
     u'tel' : u'+33140519358',
@@ -156,7 +171,8 @@ teacher = [
     u'linkedin' : u'https://www.linkedin.com/in/jean-emmanuel-deschaud-14aba42/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Frédéric Fontane',
+    u'nom' : u'Fontane',
+    u'prenom' : u'Frédéric',
     u'status' : u'Maître de Conférences',
     u'mail' : u'frederic.fontane@mines-paristech.fr',
     u'tel' : u'+33140519068',
@@ -165,7 +181,8 @@ teacher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/f/frederic.fontane.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Alexis Paljic',
+    u'nom' : u'Paljic',
+    u'prenom' : u'Alexis',
     u'status' : u'Maître de Conférences',
     u'mail' : u'alexis.paljic@mines-paristech.fr',
     u'tel' : u'+33140519161',
@@ -175,7 +192,8 @@ teacher = [
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u'http://vimeo.com/user3599717'
   },
   {
-    u'nom' : u'Joël Senpauroca',
+    u'nom' : u'Senpauroca',
+    u'prenom' : u'Joël',
     u'status' : u'Maître de Conférences',
     u'mail' : u'joel.senpauroca@mines-paristech.fr',
     u'tel' : u'+33140519177',
@@ -184,7 +202,8 @@ teacher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/j/joel.senpauroca.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Bogdan Stanciulescu',
+    u'nom' : u'Stanciulescu',
+    u'prenom' : u'Bogdan',
     u'status' : u'Maître de Conférences',
     u'mail' : u'bogdan.stanciulescu@mines-paristech.fr',
     u'tel' : u'+33140519387',
@@ -194,7 +213,8 @@ teacher = [
     u'linkedin' : u'https://www.linkedin.com/in/bogdan-stanciulescu-5239012/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Cyril Joly',
+    u'nom' : u'Joly',
+    u'prenom' : u'Cyril',
     u'status' : u'Maître de conférences',
     u'mail' : u'cyril.joly@mines-paristech.fr',
     u'tel' : u'+33140519327',
@@ -203,7 +223,8 @@ teacher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/c/cyril.joly.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Simon Tamayo',
+    u'nom' : u'Tamayo',
+    u'prenom' : u'Simon',
     u'status' : u'Maître de Conférences',
     u'mail' : u'simon.tamayo@mines-paristech.fr',
     u'tel' : u'+33140519452',
@@ -215,7 +236,8 @@ teacher = [
 ]
 searcher = [
   {
-    u'nom' : u'Sotiris Manitsaris',
+    u'nom' : u'Manitsaris',
+    u'prenom' : u'Sotiris',
     u'status' : u'Chargé de Recherche',
     u'mail' : u'sotiris.manitsaris@mines-paristech.fr',
     u'tel' : u'+33140519169',
@@ -225,7 +247,8 @@ searcher = [
     u'linkedin' : u'https://www.linkedin.com/in/sotirismanitsaris/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Amaury Bréhéret',
+    u'nom' : u'Bréhéret',
+    u'prenom' : u'Amaury',
     u'status' : u'Ingénieur R&D',
     u'mail' : u'amaury.breheret@mines-paristech.fr',
     u'tel' : u'+33140519498',
@@ -236,7 +259,8 @@ searcher = [
     u'bitbucket' : u'https://bitbucket.org/abreheret',
     u'github' : u'https://github.com/abreheret',u'vimeo' : u''},
   {
-    u'nom' : u'Tony Noël',
+    u'nom' : u'Noël',
+    u'prenom' : u'Tony',
     u'status' : u'Ingénieur R&D',
     u'mail' : u'tony.noel@mines-paristech.fr',
     u'tel' : u'+33140519028',
@@ -245,7 +269,8 @@ searcher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/t/tony.noel.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Mehdi BOUKHRIS',
+    u'nom' : u'BOUKHRIS',
+    u'prenom' : u'Mehdi',
     u'status' : u'Post-Doctorant',
     u'mail' : u'mehdi.boukhris@mines-paristech.fr',
     u'tel' : u'01.40.51.94.54',
@@ -254,7 +279,8 @@ searcher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/mehdi.boukhris.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Alina GLUSHKOVA',
+    u'nom' : u'GLUSHKOVA',
+    u'prenom' : u'Alina',
     u'status' : u'Post-Doctorante',
     u'mail' : u'alina.glushkova@mines-paristech.fr',
     u'tel' : u'01.40.51.92.97',
@@ -263,7 +289,8 @@ searcher = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Edgar Hemery',
+    u'nom' : u'Hemery',
+    u'prenom' : u'Edgar',
     u'status' : u'Post-Doctorant',
     u'mail' : u'edgar.hemery@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -272,7 +299,8 @@ searcher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/e/edgar.hemery.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Patrick Callet',
+    u'nom' : u'Callet',
+    u'prenom' : u'Patrick',
     u'status' : u'Chercheur Associé',
     u'mail' : u'patrick.callet@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -282,7 +310,8 @@ searcher = [
     u'linkedin' : u'https://www.linkedin.com/in/patrick-callet-8000522/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Lghani Menhour',
+    u'nom' : u'Menhour',
+    u'prenom' : u'Lghani',
     u'status' : u'Chercheur Associé',
     u'mail' : u'lghani.menhour@univ-reims.fr',
     u'tel' : u'N/A',
@@ -291,7 +320,8 @@ searcher = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Guy FAYOLLE',
+    u'nom' : u'FAYOLLE',
+    u'prenom' : u'Guy',
     u'status' : u'Chercheur Associé',
     u'mail' : u'guy.fayolle@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -300,7 +330,8 @@ searcher = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'', u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Thomas Muller',
+    u'nom' : u'Muller',
+    u'prenom' : u'Thomas',
     u'status' : u'Chercheur Associé',
     u'mail' : u'thomas.muller@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -309,7 +340,8 @@ searcher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/t/thomas.muller.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Fawzi Nashashibi',
+    u'nom' : u'Nashashibi',
+    u'prenom' : u'Fawzi',
     u'status' : u'Chercheur Associé',
     u'mail' : u'fawzi.nashashibi@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -318,7 +350,8 @@ searcher = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/f/fawzi.nashashibi.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Philippe Porral',
+    u'nom' : u'Porral',
+    u'prenom' : u'Philippe',
     u'status' : u'Chercheur Associé',
     u'mail' : u'philippe.porral@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -329,7 +362,8 @@ searcher = [
 ]
 technicians = [
   {
-    u'nom' : u'Jacky Lech',
+    u'nom' : u'Lech',
+    u'prenom' : u'Jacky',
     u'status' : u'Technicien',
     u'mail' : u'jacky.lech@mines-paristech.fr',
     u'tel' : u'+33140519234',
@@ -338,20 +372,23 @@ technicians = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/j/jacky.lech.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'David Mazouz',
+    u'nom' : u'Mazouz',
+    u'prenom' : u'David',
     u'status' : u'Technicien',
     u'mail' : u'david.mazouz@mines-paristech.fr',
     u'tel' : u'+33140519178',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/david-mazouz',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/images-resized.jpg',
+    #http://caor-mines-paristech.fr/wp-content/uploads/2013/10/images-resized.jpg
+    u'photo' : u"http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg",
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''}
 ]
 
 phd_cand = [
   {
-    u'nom' : u'Michelle VALENTE',
+    u'nom' : u'VALENTE',
     u'status' : u'Doctorant',
+    u'prenom' : u'Michelle',
     u'mail' : u'michelle.valente@mines-paristech.fr',
     u'tel' : u'01.40.51.93.50',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/michelle-valente',
@@ -359,7 +396,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Hugues THOMAS',
+    u'nom' : u'THOMAS',
+    u'prenom' : u'Hugues',
     u'status' : u'Doctorant',
     u'mail' : u'hugues.thomas@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -368,7 +406,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Laetitia LI',
+    u'nom' : u'LI',
+    u'prenom' : u'Laetitia',
     u'status' : u'Doctorante',
     u'mail' : u'laetitia.li@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -377,7 +416,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Paul CHAUCHAT',
+    u'nom' : u'CHAUCHAT',
+    u'prenom' : u'Paul',
     u'status' : u'Doctorant',
     u'mail' : u'paul.chauchat@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -386,7 +426,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'David TOBAR',
+    u'nom' : u'TOBAR',
+    u'prenom' : u'David',
     u'status' : u'Doctorant',
     u'mail' : u'david.tobar@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -395,8 +436,9 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Aubrey CLAUSSE',
-    u'status' : u'Doctorante',
+    u'nom' : u'CLAUSSE',
+    u'prenom' : u'Aubrey',
+    u'status' : u'Doctorant',
     u'mail' : u'aubrey.clausse@mines-paristech.fr',
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/aubrey-clausse',
@@ -404,7 +446,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Marin TOROMANOF',
+    u'nom' : u'TOROMANOF',
+    u'prenom' : u'Marin',
     u'status' : u'Doctorant',
     u'mail' : u'marin.toromanof@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -413,7 +456,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Florent Altché',
+    u'nom' : u'Altché',
+    u'prenom' : u'Florent',
     u'status' : u'Doctorant',
     u'mail' : u'florent.altche@mines-paristech.fr',
     u'tel' : u'+33140519350',
@@ -422,7 +466,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Hassan Bouchiba',
+    u'nom' : u'Bouchiba',
+    u'prenom' : u'Hassan',
     u'status' : u'Doctorant',
     u'mail' : u'hassan.bouchiba@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -431,7 +476,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/h/hassan.bouchiba.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Martin BROSSARD',
+    u'nom' : u'BROSSARD',
+    u'prenom' : u'Martin',
     u'status' : u'Doctorant',
     u'mail' : '	martin.brossard@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -440,7 +486,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/martin.brossard.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Guillaume DEVINEAU',
+    u'nom' : u'DEVINEAU',
+    u'prenom' : u'Guillaume',
     u'status' : u'Doctorant',
     u'mail' : u'guillaume.devineau@mines-paristech.fr',
     u'tel' : u'0140519350',
@@ -449,7 +496,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Grégoire D. DE DINECHIN',
+    u'nom' : u'D. DE DINECHIN',
+    u'prenom' : u'Grégoire',
     u'status' : u'Doctorant',
     u'mail' : u'gregoire.dupont_de_dinechin@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -458,7 +506,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Carlos Flores',
+    u'nom' : u'Flores',
+    u'prenom' : u'Carlos',
     u'status' : u'Doctorant',
     u'mail' : u'carlos.flores@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -467,7 +516,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/c/carlos.flores.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Fernando Garrido',
+    u'nom' : u'Garrido',
+    u'prenom' : u'Fernando',
     u'status' : u'Doctorant',
     u'mail' : u'fernando.garrido@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -476,7 +526,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/f/fernando.garrido.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Farouk GHALLABI',
+    u'nom' : u'GHALLABI',
+    u'prenom' : u'Farouk',
     u'status' : u'Doctorant',
     u'mail' : u'farouk.ghallabi@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -485,7 +536,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/f/farouk.ghallabi.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Yannick Jacob',
+    u'nom' : u'Jacob',
+    u'prenom' : u'Yannick',
     u'status' : u'Doctorant',
     u'mail' : u'yannick.jacob@mines-paristech.fr',
     u'tel' : u'+33140519260',
@@ -494,7 +546,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/y/yannick.jacob.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Maximilian JARITZ',
+    u'nom' : u'JARITZ',
+    u'prenom' : u'Maximilian',
     u'status' : u'Doctorant',
     u'mail' : u'maximilian.jaritz@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -504,7 +557,8 @@ phd_cand = [
     u'linkedin' : u'https://www.linkedin.com/in/maximilian-jaritz/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Francisco Navas',
+    u'nom' : u'Navas',
+    u'prenom' : u'Francisco',
     u'status' : u'Doctorant',
     u'mail' : u'francisco.navas@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -513,7 +567,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/f/francisco.navas.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Dinh-Van Nguyen',
+    u'nom' : u'Nguyen',
+    u'prenom' : u'Dinh-Van',
     u'status' : u'Doctorant',
     u'mail' : u'dinh-van.nguyen@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -522,7 +577,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/d/dinh-van.nguyen.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Claire Nicodeme',
+    u'nom' : u'Nicodeme',
+    u'prenom' : u'Claire',
     u'status' : u'Doctorante',
     u'mail' : u'claire.nicodeme@mines-paristech.fr',
     u'tel' : u'+33140519454',
@@ -531,7 +587,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Imane MAHTOUT',
+    u'nom' : u'MAHTOUT',
+    u'prenom' : u'Imane',
     u'status' : u'Doctorante',
     u'mail' : u'imane.mahtout@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -540,7 +597,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Marion Pilté',
+    u'nom' : u'Pilté',
+    u'prenom' : u'Marion',
     u'status' : u'Doctorante',
     u'mail' : u'marion.pilte@mines-paristech.fr',
     u'tel' : u'+33140519437',
@@ -549,7 +607,8 @@ phd_cand = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/marion.pilte.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Philip Polack',
+    u'nom' : u'Polack',
+    u'prenom' : u'Philip',
     u'status' : u'Doctorant',
     u'mail' : u'philip.polack@mines-paristech.fr',
     u'tel' : u'+33140519439',
@@ -559,7 +618,8 @@ phd_cand = [
     u'linkedin' : u'https://www.linkedin.com/in/philip-polack-20594776/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Xavier Roynard',
+    u'nom' : u'Roynard',
+    u'prenom' : u'Xavier',
     u'status' : u'Doctorant',
     u'mail' : u'xavier.roynard@mines-paristech.fr',
     u'tel' : u'+33140519350',
@@ -568,7 +628,8 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Daniele Sportillo',
+    u'nom' : u'Sportillo',
+    u'prenom' : u'Daniele',
     u'status' : u'Doctorant',
     u'mail' : u'daniele.sportillo@mines-paristech.fr',
     u'tel' : u'+33140519458',
@@ -578,7 +639,8 @@ phd_cand = [
     u'linkedin' : u'https://www.linkedin.com/in/danielesportillo/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Li Yu',
+    u'nom' : u'Yu',
+    u'prenom' : u'Li',
     u'status' : u'Doctorant',
     u'mail' : u'li.yu@mines-paristech.fr',
     u'tel' : u'+33140519350',
@@ -596,7 +658,7 @@ def print_team(name,array):
   for person in array:
     print """<div class="four columns omega"> <div class="team_block_content"><div class="pic">"""
     print """<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo'])
-    print """<div class="team_block"> <h4>%s</h4> """ %( person[u'nom'] )
+    print """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'], person[u'nom'] )
     print """<p class="team_desc">"%s"</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']))
     print """<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail'])
     if person[u'tel'] != u'':
@@ -634,23 +696,8 @@ def print_footer() :
   print '</div></div></div></div>'
   print "[/insert_php]\n";
 
-def array_sort(array, on, order=u'SORT_ASC') :
-  new_array = []
-  sortable_array = []
-  for v in array :
-    if isinstance(v, dict):
-      for k2 , v2 in v.iteritems() :
-        if k2 == on :
-          sortable_array.append(v2)
-    else :
-      sortable_array.append(v)
+phd_cand = sorted(phd_cand, key=lambda d: d[u'nom'], reverse=False)
 
-    sortable_array = sorted(sortable_array, reverse=order!=u'SORT_ASC')
-    for p in sortable_array :
-      new_array.append(p)
-    return new_array
-
-#phd_cand = array_sort(phd_cand,u'nom',u'SORT_ASC')
 data = OrderedDict([("DIRECTION"              , admin      ),
                     ("ENSEIGNANTS-CHERCHEURS" , teacher    ),
                     ("CHERCHEURS"             , searcher   ),
