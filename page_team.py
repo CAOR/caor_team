@@ -684,7 +684,6 @@ def print_team(name,array):
   print "</div> </div> </div>\n\n"
 
 def print_header() :
-  print "[insert_php]\n";
   print "<link href=\"//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">"
   print "<style> .team_block_content .pic img { border-radius: 5%; } </style>"
   print "\n\n"
@@ -698,7 +697,6 @@ def print_footer() :
   print '<input type="hidden" class="counter_hidden" data-end-nu="85" name="counter00-value" value="" />'
   print '<div class="counter_desc">Membres</div>'
   print '</div></div></div></div>'
-  print "[/insert_php]\n";
 
 phd_cand = sorted(phd_cand, key=lambda d: d[u'nom'], reverse=False)
 

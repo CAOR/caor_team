@@ -1,5 +1,3 @@
-[insert_php]
-
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <style> .team_block_content .pic img { border-radius: 5%; } </style>
 
@@ -724,5 +722,3 @@
 <input type="hidden" class="counter_hidden" data-end-nu="85" name="counter00-value" value="" />
 <div class="counter_desc">Membres</div>
 </div></div></div></div>
-[/insert_php]
-
