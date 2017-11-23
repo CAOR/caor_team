@@ -2,6 +2,7 @@
 
 from collections import OrderedDict
 import sys
+sys.stdout.flush()
 
 if len(sys.argv) < 2:
   lang = 'FR'
@@ -660,25 +661,25 @@ def print_team(name,array):
   print """<div class="section_big_title"> <h1><span>%s</span></h1>""" %(name)
   print """</div> <div class="container"> <div class="row"> <div class="sixteen columns">\n\n"""
   for person in array:
-    print """<div class="four columns omega"> <div class="team_block_content"><div class="pic">"""
-    print """<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo'])
-    print """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'].encode('utf8'), person[u'nom'].encode('utf8') )
-    print """<p class="team_desc">"%s"</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']).encode('utf8'))
-    print """<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail'])
+    sys.stdout.write("""<div class="four columns omega"> <div class="team_block_content"><div class="pic">""")
+    sys.stdout.write("""<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo']))
+    sys.stdout.write("""<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'].encode('utf8'), person[u'nom'].encode('utf8') ))
+    sys.stdout.write("""<p class="team_desc">"%s"</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']).encode('utf8')))
+    sys.stdout.write("""<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail']))
     if person[u'tel'] != u'':
-      print """<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel'])
+      sys.stdout.write("""<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel']))
     if person[u'annuaire'] != u'':
-      print """<a href="%s" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp; """ % (person[u'annuaire'])
+      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp; """ % (person[u'annuaire']))
     if person[u'site'] != u'':
-      print """<a href="%s" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp; """ %(person[u'site'])
+      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp; """ %(person[u'site']))
     if person[u'linkedin']!= u'':
-      print """<a href="%s" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp; """ % (person[u'linkedin'])
+      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp; """ % (person[u'linkedin']))
     if person[u'bitbucket'] != u'':
-      print """<a href="%s" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp; """ % (person[u'bitbucket'])
+      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp; """ % (person[u'bitbucket']))
     if person[u'github'] != u'':
-      print """<a href="%s" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp; """ % (person[u'github'])
+      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp; """ % (person[u'github']))
     if person[u'vimeo'] != u'':
-      print """<a href="%s" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp; """ % (person[u'vimeo'])
+      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp; """ % (person[u'vimeo']))
     print "</p> </div> </div> </div> </div> "
     print "\n\n"
   print "</div> </div> </div>\n\n"
