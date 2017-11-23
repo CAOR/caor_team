@@ -1,11 +1,15 @@
 # coding: utf8
 
 from collections import OrderedDict
-import operator
+import sys
+
+if len(sys.argv) < 2:
+  lang = 'FR'
+else:
+  lang = sys.argv[1]
 
 def get_fr_to_en(status):
-  lang = u'EN'
-  if lang ==u'FR' : return status
+  if lang == 'FR': return status
   else :
     status = status.lower()
     if   status == u"professeur, directeur"     : return u"Professor, Director"
@@ -658,8 +662,8 @@ def print_team(name,array):
   for person in array:
     print """<div class="four columns omega"> <div class="team_block_content"><div class="pic">"""
     print """<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo'])
-    print """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'], person[u'nom'] )
-    print """<p class="team_desc">"%s"</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']))
+    print """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'].encode('utf8'), person[u'nom'].encode('utf8') )
+    print """<p class="team_desc">"%s"</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']).encode('utf8'))
     print """<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail'])
     if person[u'tel'] != u'':
       print """<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel'])
@@ -704,7 +708,6 @@ data = OrderedDict([("DIRECTION"              , admin      ),
                     ("TECHNICIENS"            , technicians),
                     ("DOCTORANTS"             , phd_cand   ),
                     ("STAGIAIRES"             , inter      )])
-
 print_header()
 for name, persons in data.iteritems():
   print_team(get_fr_to_en(name),persons)
