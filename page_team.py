@@ -679,7 +679,7 @@ def print_team(name,array):
     sys.stdout.write("""<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'].encode('utf8'), person[u'nom'].encode('utf8') ))
     sys.stdout.write("""<p class="team_desc">%s</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']).encode('utf8')))
     sys.stdout.write("""<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail']))
-    if person[u'tel'] != u'':
+    if person[u'tel'] != u'' and person[u'tel'] != u'N/A':
       sys.stdout.write("""<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel']))
     if person[u'annuaire'] != u'':
       sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp; """ % (person[u'annuaire']))
