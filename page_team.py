@@ -466,7 +466,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/aubrey-clausse',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/aubrey.clausse.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'TOROMANOF',
@@ -532,7 +532,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/gregoire-dupont-de-dinechin',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/g/gregoire.dupont_de_dinechin.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Flores',
