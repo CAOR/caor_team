@@ -702,10 +702,8 @@ def print_team(name,array):
   for person in array:
     # nom = person[u'nom'].lower()
     nom = person[u'nom'].title()
-    if "De " in nom:
-      nom = nom.replace("De ","de ")
-    if " D'" in nom :
-      nom= nom.replace(" D'"," d'")
+    if u"De "in nom: nom = nom.replace(u"De ",u"de ")
+    if u"D'" in nom: nom = nom.replace(u"D'",u"d'")
 
     # sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
     out += """<div class="four columns omega"> <div class="team_block_content"><div class="pic">"""
