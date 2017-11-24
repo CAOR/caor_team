@@ -750,7 +750,7 @@ def print_footer() :
   return out
 
 def sort_status(persons, status) :
-  persons = sorted(persons, key=lambda d: (d[u'nom']))
+  persons = sorted(persons, key=lambda d: (d[u'nom'].lower()))
   out = []
   for sub in status :
     for person in persons:
