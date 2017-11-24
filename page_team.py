@@ -37,6 +37,7 @@ def get_fr_to_en(status):
     elif status == u"techniciens"               : return u"Technicians"
     elif status == u"doctorants"                : return u"PhD Candidates"
     elif status == u"stagiaires"                : return u"Internships"
+    elif status == u"depuis"                    : return u"since"
     else : return "ERRROORORRR"
     
 admin = [
@@ -404,27 +405,29 @@ technicians = [
 phd_cand = [
   {
     u'nom' : u'VALENTE',
-    u'status' : u'Doctorant',
     u'prenom' : u'Michelle',
+    u'promo' : u'2016',
+    u'status' : u'Doctorant',
     u'mail' : u'michelle.valente@mines-paristech.fr',
     u'tel' : u'01.40.51.93.50',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/michelle-valente',
-    u'site' : u'',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
-    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
+    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u'', u'site' : u''
+    },
   {
     u'nom' : u'THOMAS',
     u'prenom' : u'Hugues',
+    u'promo' : u'2016',
     u'status' : u'Doctorant',
     u'mail' : u'hugues.thomas@mines-paristech.fr',
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/hugues-thomas',
-    u'site' : u'',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
-    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
+    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u'' , u'site' : u''},
   {
     u'nom' : u'LI',
     u'prenom' : u'Laetitia',
+    u'promo' : u'2016',
     u'status' : u'Doctorante',
     u'mail' : u'laetitia.li@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -435,6 +438,7 @@ phd_cand = [
   {
     u'nom' : u'CHAUCHAT',
     u'prenom' : u'Paul',
+    u'promo' : u'2017',
     u'status' : u'Doctorant',
     u'mail' : u'paul.chauchat@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -445,6 +449,7 @@ phd_cand = [
   {
     u'nom' : u'TOBAR',
     u'prenom' : u'David',
+    u'promo' : u'2017',
     u'status' : u'Doctorant',
     u'mail' : u'david.tobar@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -455,6 +460,7 @@ phd_cand = [
   {
     u'nom' : u'CLAUSSE',
     u'prenom' : u'Aubrey',
+    u'promo' : u'2017',
     u'status' : u'Doctorant',
     u'mail' : u'aubrey.clausse@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -465,6 +471,7 @@ phd_cand = [
   {
     u'nom' : u'TOROMANOF',
     u'prenom' : u'Marin',
+    u'promo' : u'2017',
     u'status' : u'Doctorant',
     u'mail' : u'marin.toromanof@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -475,6 +482,7 @@ phd_cand = [
   {
     u'nom' : u'Altché',
     u'prenom' : u'Florent',
+    u'promo' : u'2015',
     u'status' : u'Doctorant',
     u'mail' : u'florent.altche@mines-paristech.fr',
     u'tel' : u'+33140519350',
@@ -485,6 +493,7 @@ phd_cand = [
   {
     u'nom' : u'Bouchiba',
     u'prenom' : u'Hassan',
+    u'promo' : u'2014',
     u'status' : u'Doctorant',
     u'mail' : u'hassan.bouchiba@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -495,6 +504,7 @@ phd_cand = [
   {
     u'nom' : u'BROSSARD',
     u'prenom' : u'Martin',
+    u'promo' : u'2017',
     u'status' : u'Doctorant',
     u'mail' : '	martin.brossard@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -505,6 +515,7 @@ phd_cand = [
   {
     u'nom' : u'DEVINEAU',
     u'prenom' : u'Guillaume',
+    u'promo' : u'2016',
     u'status' : u'Doctorant',
     u'mail' : u'guillaume.devineau@mines-paristech.fr',
     u'tel' : u'0140519350',
@@ -513,8 +524,9 @@ phd_cand = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'D. DE DINECHIN',
+    u'nom' : u'D. de DINECHIN',
     u'prenom' : u'Grégoire',
+    u'promo' : u'2017',
     u'status' : u'Doctorant',
     u'mail' : u'gregoire.dupont_de_dinechin@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -525,6 +537,7 @@ phd_cand = [
   {
     u'nom' : u'Flores',
     u'prenom' : u'Carlos',
+    u'promo' : u'2015',
     u'status' : u'Doctorant',
     u'mail' : u'carlos.flores@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -536,6 +549,7 @@ phd_cand = [
     u'nom' : u'Garrido',
     u'prenom' : u'Fernando',
     u'status' : u'Doctorant',
+    u'promo' : u'2014',
     u'mail' : u'fernando.garrido@mines-paristech.fr',
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/fernando-garrido',
@@ -545,6 +559,7 @@ phd_cand = [
   {
     u'nom' : u'GHALLABI',
     u'prenom' : u'Farouk',
+    u'promo' : u'2016',
     u'status' : u'Doctorant',
     u'mail' : u'farouk.ghallabi@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -555,6 +570,7 @@ phd_cand = [
   {
     u'nom' : u'Jacob',
     u'prenom' : u'Yannick',
+    u'promo' : u'2013',
     u'status' : u'Doctorant',
     u'mail' : u'yannick.jacob@mines-paristech.fr',
     u'tel' : u'+33140519260',
@@ -565,6 +581,7 @@ phd_cand = [
   {
     u'nom' : u'JARITZ',
     u'prenom' : u'Maximilian',
+    u'promo' : u'2016',
     u'status' : u'Doctorant',
     u'mail' : u'maximilian.jaritz@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -576,6 +593,7 @@ phd_cand = [
   {
     u'nom' : u'Navas',
     u'prenom' : u'Francisco',
+    u'promo' : u'2015',
     u'status' : u'Doctorant',
     u'mail' : u'francisco.navas@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -586,6 +604,7 @@ phd_cand = [
   {
     u'nom' : u'Nguyen',
     u'prenom' : u'Dinh-Van',
+    u'promo' : u'2015',
     u'status' : u'Doctorant',
     u'mail' : u'dinh-van.nguyen@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -596,6 +615,7 @@ phd_cand = [
   {
     u'nom' : u'Nicodeme',
     u'prenom' : u'Claire',
+    u'promo' : u'2014',
     u'status' : u'Doctorante',
     u'mail' : u'claire.nicodeme@mines-paristech.fr',
     u'tel' : u'+33140519454',
@@ -606,6 +626,7 @@ phd_cand = [
   {
     u'nom' : u'MAHTOUT',
     u'prenom' : u'Imane',
+    u'promo' : u'2017',
     u'status' : u'Doctorante',
     u'mail' : u'imane.mahtout@mines-paristech.fr',
     u'tel' : u'N/A',
@@ -616,6 +637,7 @@ phd_cand = [
   {
     u'nom' : u'Pilté',
     u'prenom' : u'Marion',
+    u'promo' : u'2015',
     u'status' : u'Doctorante',
     u'mail' : u'marion.pilte@mines-paristech.fr',
     u'tel' : u'+33140519437',
@@ -626,6 +648,7 @@ phd_cand = [
   {
     u'nom' : u'Polack',
     u'prenom' : u'Philip',
+    u'promo' : u'2015',
     u'status' : u'Doctorant',
     u'mail' : u'philip.polack@mines-paristech.fr',
     u'tel' : u'+33140519439',
@@ -637,6 +660,7 @@ phd_cand = [
   {
     u'nom' : u'Roynard',
     u'prenom' : u'Xavier',
+    u'promo' : u'2015',
     u'status' : u'Doctorant',
     u'mail' : u'xavier.roynard@mines-paristech.fr',
     u'tel' : u'+33140519350',
@@ -647,6 +671,7 @@ phd_cand = [
   {
     u'nom' : u'Sportillo',
     u'prenom' : u'Daniele',
+    u'promo' : u'2015',
     u'status' : u'Doctorant',
     u'mail' : u'daniele.sportillo@mines-paristech.fr',
     u'tel' : u'+33140519458',
@@ -658,6 +683,7 @@ phd_cand = [
   {
     u'nom' : u'Yu',
     u'prenom' : u'Li',
+    u'promo' : u'2014',
     u'status' : u'Doctorant',
     u'mail' : u'li.yu@mines-paristech.fr',
     u'tel' : u'+33140519350',
@@ -674,11 +700,21 @@ def print_team(name,array):
   out += """<div class="section_big_title"> <h1><span>%s</span></h1>""" %(name)
   out += """</div> <div class="container"> <div class="row"> <div class="sixteen columns">\n"""
   for person in array:
-    sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
+    # nom = person[u'nom'].lower()
+    nom = person[u'nom'].title()
+    if "De " in nom:
+      nom = nom.replace("De ","de ")
+    if " D'" in nom :
+      nom= nom.replace(" D'"," d'")
+
+    # sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
     out += """<div class="four columns omega"> <div class="team_block_content"><div class="pic">"""
     out += """<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo'])
-    out += """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'], person[u'nom'] )
-    out += """<p class="team_desc">%s</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']))
+    out += """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'], nom )
+    if person[u'status'] == 'Doctorant' or person[u'status'] == 'Doctorante':
+      out += """<p class="team_desc">%s %s %s </p> <p class="team_text">""" %( get_fr_to_en(person[u'status']),get_fr_to_en(u'depuis'), person[u'promo'])
+    else :
+      out += """<p class="team_desc">%s</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']))
     out += """<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail'])
     if person[u'tel'] != u'' and person[u'tel'] != u'N/A':
       out += """<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel'])
@@ -716,7 +752,7 @@ def print_footer() :
   out += '</div></div></div></div>'
   return out
 
-phd_cand = sorted(phd_cand, key=lambda d: d[u'nom'], reverse=False)
+phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
 
 data = OrderedDict([("DIRECTION"              , admin      ),
                     ("ENSEIGNANTS-CHERCHEURS" , teacher    ),
