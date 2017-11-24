@@ -422,7 +422,7 @@ phd_cand = [
     u'mail' : u'hugues.thomas@mines-paristech.fr',
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/hugues-thomas',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/h/hugues.thomas.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u'' , u'site' : u''},
   {
     u'nom' : u'LI',
@@ -438,13 +438,13 @@ phd_cand = [
   {
     u'nom' : u'CHAUCHAT',
     u'prenom' : u'Paul',
-    u'promo' : u'2017',
+    u'promo' : u'2016',
     u'status' : u'Doctorant',
     u'mail' : u'paul.chauchat@mines-paristech.fr',
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/paul-chauchat',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/p/paul.chauchat.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'TOBAR',
@@ -521,7 +521,7 @@ phd_cand = [
     u'tel' : u'0140519350',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/guillaume-devineau',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/g/guillaume.devineau.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'D. de DINECHIN',
