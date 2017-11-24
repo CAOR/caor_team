@@ -739,7 +739,7 @@ def make_section(name,persons):
       out += """<a href="%s" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp; """ % (person[u'github'])
     if person[u'vimeo'] != u'':
       out += """<a href="%s" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp; """ % (person[u'vimeo'])
-    out += "</p> </div> </div> </div> </div> "
+    out += "</p> </div> </div> </div> </div>\n"
     # out += "\n"
   out +="</div> </div> </div>\n\n"
   return out
@@ -786,7 +786,8 @@ data = OrderedDict([("DIRECTION"              , admin      ),
 
 out = print_header()
 for name, persons in data.iteritems():
-  out += make_section(get_fr_to_en(name),persons)
+  if len(persons) != 0:
+    out += make_section(get_fr_to_en(name),persons)
 out += print_footer()
 
 print out.encode('utf8')
