@@ -691,6 +691,18 @@ phd_cand = [
     u'site' : u'',
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/l/li.yu.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
+  } ,
+  {
+    u'nom' : u'NOWAKOWSKI',
+    u'prenom' : u'Mathieu',
+    u'promo' : u'2015',
+    u'status' : u'Doctorant',
+    u'mail' : u'mathieu.nowakowski@mines-paristech.fr',
+    u'tel' : u'',
+    u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/mathieu-nowakowski',
+    u'site' : u'',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }
 ]
 inter = []
