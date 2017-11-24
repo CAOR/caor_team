@@ -695,12 +695,11 @@ phd_cand = [
 ]
 inter = []
 
-def print_team(name,array):
+def make_section(name,persons):
   out = str( )
   out += """<div class="section_big_title"> <h1><span>%s</span></h1>""" %(name)
   out += """</div> <div class="container"> <div class="row"> <div class="sixteen columns">\n"""
-  for person in array:
-    # nom = person[u'nom'].lower()
+  for person in persons:
     nom = person[u'nom'].title()
     if u"De "in nom: nom = nom.replace(u"De ",u"de ")
     if u"D'" in nom: nom = nom.replace(u"D'",u"d'")
@@ -750,7 +749,21 @@ def print_footer() :
   out += '</div></div></div></div>'
   return out
 
+def sort_status(persons, status) :
+  persons = sorted(persons, key=lambda d: (d[u'nom']))
+  out = []
+  for sub in status :
+    for person in persons:
+      try:
+        if person["status"].startswith(sub):
+          out.append(person)
+      except AttributeError:
+        print "***", person['prenom'] , person['nom']
+  return out
+  
 phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
+teacher  = sort_status(teacher,[u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
+searcher = sort_status(searcher,[u"Chargé", u"Ingénieur", "Post", u"Chercheu"])
 
 data = OrderedDict([("DIRECTION"              , admin      ),
                     ("ENSEIGNANTS-CHERCHEURS" , teacher    ),
@@ -761,7 +774,7 @@ data = OrderedDict([("DIRECTION"              , admin      ),
 
 out = print_header()
 for name, persons in data.iteritems():
-  out += print_team(get_fr_to_en(name),persons)
+  out += make_section(get_fr_to_en(name),persons)
 out += print_footer()
 
 print out.encode('utf8')
