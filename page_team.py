@@ -91,15 +91,14 @@ admin = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Cailloux-Roques',
-    u'prenom' : u'Myriam',
-    u'status' : u'Chargée Adm. Mastère MISL',
-    u'mail' : u'myriam.cailloux-roques@mines-paristech.fr',
-    u'tel' : u'+33140519122',
+    u'nom'      : u'Cailloux-Roques',
+    u'prenom'   : u'Myriam',
+    u'status'   : u'Chargée Adm. Mastère MISL',
+    u'mail'     : u'myriam.cailloux-roques@mines-paristech.fr',
+    u'tel'      : u'+33140519122',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/myriam-cailloux-roques',
-    u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
-    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
+    u'photo'    : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'site'     : u'',  u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }
 ]
 teacher = [
@@ -671,46 +670,51 @@ phd_cand = [
 inter = []
 
 def print_team(name,array):
-  print """<div class="section_big_title"> <h1><span>%s</span></h1>""" %(name)
-  print """</div> <div class="container"> <div class="row"> <div class="sixteen columns">\n\n"""
+  out = str( )
+  out += """<div class="section_big_title"> <h1><span>%s</span></h1>""" %(name)
+  out += """</div> <div class="container"> <div class="row"> <div class="sixteen columns">\n"""
   for person in array:
-    sys.stdout.write("""<div class="four columns omega"> <div class="team_block_content"><div class="pic">""")
-    sys.stdout.write("""<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo']))
-    sys.stdout.write("""<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'].encode('utf8'), person[u'nom'].encode('utf8') ))
-    sys.stdout.write("""<p class="team_desc">%s</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']).encode('utf8')))
-    sys.stdout.write("""<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail']))
+    sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
+    out += """<div class="four columns omega"> <div class="team_block_content"><div class="pic">"""
+    out += """<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo'])
+    out += """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'], person[u'nom'] )
+    out += """<p class="team_desc">%s</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']))
+    out += """<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail'])
     if person[u'tel'] != u'' and person[u'tel'] != u'N/A':
-      sys.stdout.write("""<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel']))
+      out += """<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel'])
     if person[u'annuaire'] != u'':
-      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp; """ % (person[u'annuaire']))
+      out += """<a href="%s" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp; """ % (person[u'annuaire'])
     if person[u'site'] != u'':
-      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp; """ %(person[u'site']))
+      out += """<a href="%s" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp; """ %(person[u'site'])
     if person[u'linkedin']!= u'':
-      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp; """ % (person[u'linkedin']))
+      out += """<a href="%s" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp; """ % (person[u'linkedin'])
     if person[u'bitbucket'] != u'':
-      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp; """ % (person[u'bitbucket']))
+      out += """<a href="%s" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp; """ % (person[u'bitbucket'])
     if person[u'github'] != u'':
-      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp; """ % (person[u'github']))
+      out += """<a href="%s" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp; """ % (person[u'github'])
     if person[u'vimeo'] != u'':
-      sys.stdout.write("""<a href="%s" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp; """ % (person[u'vimeo']))
-    print "</p> </div> </div> </div> </div> "
-    print "\n\n"
-  print "</div> </div> </div>\n\n"
+      out += """<a href="%s" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp; """ % (person[u'vimeo'])
+    out += "</p> </div> </div> </div> </div> "
+    # out += "\n"
+  out +="</div> </div> </div>\n\n"
+  return out
 
 def print_header() :
-  print "<link href=\"//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">"
-  print "<style> .team_block_content .pic img { border-radius: 5%; } </style>"
-  print "\n\n"
+  out = "<link href=\"//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">"
+  out += "<style> .team_block_content .pic img { border-radius: 5%; } </style>"
+  out += "\n\n"
+  return out
 
 def print_footer() :
-  print '<div class="container animationStart ">'
-  print '<div class="row">'
-  print '<div class="sixteen columns">'
-  print '<div class="numbers_holder animationBegin">'
-  print '<div id="counter00" class="counter">'
-  print '<input type="hidden" class="counter_hidden" data-end-nu="85" name="counter00-value" value="" />'
-  print '<div class="counter_desc">Membres</div>'
-  print '</div></div></div></div>'
+  out  = '<div class="container animationStart ">'
+  out += '<div class="row">'
+  out += '<div class="sixteen columns">'
+  out += '<div class="numbers_holder animationBegin">'
+  out += '<div id="counter00" class="counter">'
+  out += '<input type="hidden" class="counter_hidden" data-end-nu="85" name="counter00-value" value="" />'
+  out += '<div class="counter_desc">Membres</div>'
+  out += '</div></div></div></div>'
+  return out
 
 phd_cand = sorted(phd_cand, key=lambda d: d[u'nom'], reverse=False)
 
@@ -720,7 +724,10 @@ data = OrderedDict([("DIRECTION"              , admin      ),
                     ("TECHNICIENS"            , technicians),
                     ("DOCTORANTS"             , phd_cand   ),
                     ("STAGIAIRES"             , inter      )])
-print_header()
+
+out = print_header()
 for name, persons in data.iteritems():
-  print_team(get_fr_to_en(name),persons)
-print_footer()
+  out += print_team(get_fr_to_en(name),persons)
+out += print_footer()
+
+print out.encode('utf8')
