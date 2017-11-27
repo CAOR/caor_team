@@ -234,7 +234,7 @@ teacher = [
     u'mail' : u'simon.tamayo@mines-paristech.fr',
     u'tel' : u'+33140519452',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/simon-tamayo',
-    u'site' : u'',
+    u'site' : u'http://simontamayo.com/',
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/s/simon.tamayo.jpg',
     u'linkedin' : u'https://www.linkedin.com/in/simontamayo/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''}
