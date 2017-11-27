@@ -706,42 +706,42 @@ phd_cand = [
   }
 ]
 inter = []
-
+from jinja2 import Template
 def make_section(name,persons):
-  out = str( )
-  out += """<div class="section_big_title"> <h1><span>%s</span></h1>""" %(name)
-  out += """</div> <div class="container"> <div class="row"> <div class="sixteen columns">\n"""
+  since = get_fr_to_en(u'depuis')
   for person in persons:
     nom = person[u'nom'].title()
     if u"De "in nom: nom = nom.replace(u"De ",u"de ")
     if u"D'" in nom: nom = nom.replace(u"D'",u"d'")
-
+    person[u'nom'] = nom
+    person[u'status'] = get_fr_to_en(person[u'status'])
     # sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
-    out += """<div class="four columns omega"> <div class="team_block_content"><div class="pic">"""
-    out += """<img src="%s" style="margin-left:14px;margin-right:14px">""" %(person[u'photo'])
-    out += """<div class="team_block"> <h4>%s %s</h4> """ %( person[u'prenom'], nom )
-    if person[u'status'] == 'Doctorant' or person[u'status'] == 'Doctorante':
-      out += """<p class="team_desc">%s %s %s </p> <p class="team_text">""" %( get_fr_to_en(person[u'status']),get_fr_to_en(u'depuis'), person[u'promo'])
-    else :
-      out += """<p class="team_desc">%s</p> <p class="team_text">""" %( get_fr_to_en(person[u'status']))
-    out += """<a href="mailto:%s" title="%s"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp; """ % (person[u'mail'],person[u'mail'])
-    if person[u'tel'] != u'' and person[u'tel'] != u'N/A':
-      out += """<a href="tel:%s"><i class="fa fa-phone" title="%s"></i></a> &nbsp;&nbsp; """ % (person[u'tel'],person[u'tel'])
-    if person[u'annuaire'] != u'':
-      out += """<a href="%s" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp; """ % (person[u'annuaire'])
-    if person[u'site'] != u'':
-      out += """<a href="%s" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp; """ %(person[u'site'])
-    if person[u'linkedin']!= u'':
-      out += """<a href="%s" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp; """ % (person[u'linkedin'])
-    if person[u'bitbucket'] != u'':
-      out += """<a href="%s" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp; """ % (person[u'bitbucket'])
-    if person[u'github'] != u'':
-      out += """<a href="%s" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp; """ % (person[u'github'])
-    if person[u'vimeo'] != u'':
-      out += """<a href="%s" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp; """ % (person[u'vimeo'])
-    out += "</p> </div> </div> </div> </div>\n"
-    # out += "\n"
-  out +="</div> </div> </div>\n\n"
+  template = Template( """
+  <div class="section_big_title"> <h1><span> {{name_section}}</span></h1>
+  </div> <div class="container"> <div class="row"> <div class="sixteen columns">
+  {% for person in people %}
+    <div class="four columns omega"> <div class="team_block_content"><div class="pic">
+    <img src="{{person.photo}}" style="margin-left:14px;margin-right:14px">
+    <div class="team_block"> <h4>{{person.prenom}} {{person.nom}}</h4>
+    {% if person.status == 'Doctorant' or person.status == 'Doctorante' %} 
+      <p class="team_desc">{{person.status}} {{depuis}} {person.promo} </p> <p class="team_text">
+    {% else %}
+      <p class="team_desc">{{person.status}}</p> <p class="team_text">
+    {% endif %}
+    <a href="mailto:{{person.mail}}" title="{{person.mail}}"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;
+    {% if person.tel != '' and person.tel != 'N/A' %} <a href="tel:{{person.tel}}"><i class="fa fa-phone" title="{{person.tel}}"></i></a> &nbsp;&nbsp;{% endif %}
+    {% if person.annuaire != '' %} <a href="{{person.annuaire}}" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;{% endif %}
+    {% if person.site != ''%} <a href="{{person.site}}" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp;{% endif %}
+    {% if person.linkedin != '' %} <a href="{{person.linkedin}}" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp;{% endif %}
+    {% if person.bitbucket != '' %} <a href="{{person.bitbucket}}" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp;{% endif %}
+    {% if person.github != '' %} <a href="{{person.github}}" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp;{% endif %}
+    {% if person.vimeo != '' %} <a href="{{person.vimeo}}" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp;{% endif %}
+    </p> </div> </div> </div> </div>
+  {% endfor %} 
+  </div> </div> </div>
+  """)
+  out = template.render(name_section=name, people=persons, depuis=since)
+  out = out.replace("\n    ","")
   return out
 
 def print_header() :
