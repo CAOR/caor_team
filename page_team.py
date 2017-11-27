@@ -723,8 +723,8 @@ def make_section(name,persons):
     <div class="four columns omega"> <div class="team_block_content"><div class="pic">
     <img src="{{person.photo}}" style="margin-left:14px;margin-right:14px">
     <div class="team_block"> <h4>{{person.prenom}} {{person.nom}}</h4>
-    {% if person.status == 'Doctorant' or person.status == 'Doctorante' %} 
-      <p class="team_desc">{{person.status}} {{depuis}} {person.promo} </p> <p class="team_text">
+    {% if person.status == 'Doctorant' or person.status == 'Doctorante' or person.status == 'PhD Candidate' %} 
+      <p class="team_desc">{{person.status}} {{depuis}} {{person.promo}} </p> <p class="team_text">
     {% else %}
       <p class="team_desc">{{person.status}}</p> <p class="team_text">
     {% endif %}
