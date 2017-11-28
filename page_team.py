@@ -319,13 +319,13 @@ searcher = [
     u'prenom' : u'Jean-Michel',
     u'status' : u'Chercheur Associé',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
-    u'mail' : u'none@none.fr', u'tel' : u'', u'annuaire' : u'', u'site' : u'', u'linkedin' : u'', u'bitbucket' : u'', u'github' : u'',u'vimeo' : u''},
+    u'mail' : u'coron@ann.jussieu.fr', u'tel' : u'', u'annuaire' : u'', u'site' : u'', u'linkedin' : u'', u'bitbucket' : u'', u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'FLIESS',
     u'prenom' : u'Michel',
     u'status' : u'Chercheur Associé',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
-    u'mail' : u'none@none.fr', 
+    u'mail' : u'michel.fliess@polytechnique.edu', 
     u'tel' : u'', u'annuaire' : u'', u'site' : u'', u'linkedin' : u'', u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Menhour',
