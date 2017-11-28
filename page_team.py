@@ -89,7 +89,7 @@ admin = [
     u'tel' : u'+33140519354',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/christophe-kotfila',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom'      : u'Cailloux-Roques',
@@ -98,7 +98,7 @@ admin = [
     u'mail'     : u'myriam.cailloux-roques@mines-paristech.fr',
     u'tel'      : u'+33140519122',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/myriam-cailloux-roques',
-    u'photo'    : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo'    : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'site'     : u'',  u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }
 ]
@@ -291,7 +291,7 @@ searcher = [
     u'tel' : u'01.40.51.92.97',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/alina-glushkova',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Hemery',
@@ -318,13 +318,13 @@ searcher = [
     u'nom' : u'CORON',
     u'prenom' : u'Jean-Michel',
     u'status' : u'Chercheur Associé',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'mail' : u'coron@ann.jussieu.fr', u'tel' : u'', u'annuaire' : u'', u'site' : u'', u'linkedin' : u'', u'bitbucket' : u'', u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'FLIESS',
     u'prenom' : u'Michel',
     u'status' : u'Chercheur Associé',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'mail' : u'michel.fliess@polytechnique.edu', 
     u'tel' : u'', u'annuaire' : u'', u'site' : u'', u'linkedin' : u'', u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
@@ -335,7 +335,7 @@ searcher = [
     u'tel' : u'N/A',
     u'annuaire' : u'',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'FAYOLLE',
@@ -345,7 +345,7 @@ searcher = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/guy-fayolle',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'', u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Muller',
@@ -398,7 +398,7 @@ technicians = [
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/david-mazouz',
     u'site' : u'',
     #http://caor-mines-paristech.fr/wp-content/uploads/2013/10/images-resized.jpg
-    u'photo' : u"http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg",
+    u'photo' : u"http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png",
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''}
 ]
 
@@ -411,7 +411,7 @@ phd_cand = [
     u'mail' : u'michelle.valente@mines-paristech.fr',
     u'tel' : u'01.40.51.93.50',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/michelle-valente',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u'', u'site' : u''
     },
   {
@@ -433,7 +433,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/laetitia-li',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'CHAUCHAT',
@@ -455,7 +455,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/david-tobar',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'CLAUSSE',
@@ -477,7 +477,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/marin-toromanof',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Altché',
@@ -488,7 +488,7 @@ phd_cand = [
     u'tel' : u'+33140519350',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/florent-altche',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Bouchiba',
@@ -621,7 +621,7 @@ phd_cand = [
     u'tel' : u'+33140519454',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/claire-nicodeme',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'MAHTOUT',
@@ -632,7 +632,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/imane-mahtout',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Pilté',
@@ -666,7 +666,7 @@ phd_cand = [
     u'tel' : u'+33140519350',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/xavier-roynard',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Sportillo',
@@ -701,7 +701,7 @@ phd_cand = [
     u'tel' : u'',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/mathieu-nowakowski',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2014/11/blank.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }
 ]
