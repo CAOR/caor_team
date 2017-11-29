@@ -335,7 +335,7 @@ searcher = [
     u'tel' : u'N/A',
     u'annuaire' : u'',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2016/03/lghani.menhour.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'FAYOLLE',
