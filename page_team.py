@@ -52,7 +52,7 @@ admin = [
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/arnaud.de_la_fortelle.jpg',
     u'linkedin' : u'https://www.linkedin.com/in/arnaud-de-la-fortelle-353ba15/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
-  { u'nom' : u"d'Andrea-Novel",
+  { u'nom' : u"d'Andréa-Novel",
     u'prenom' : u'Brigitte',
     u'status' : u'Prof., Resp. Enseignement',
     u'mail' : u'brigitte.dandrea-novel@mines-paristech.fr',
