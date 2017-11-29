@@ -318,7 +318,7 @@ searcher = [
     u'nom' : u'CORON',
     u'prenom' : u'Jean-Michel',
     u'status' : u'Chercheur Associé',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2016/03/jean-michel.coron_.png',
     u'mail' : u'coron@ann.jussieu.fr', u'tel' : u'', u'annuaire' : u'', u'site' : u'', u'linkedin' : u'', u'bitbucket' : u'', u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'FLIESS',
