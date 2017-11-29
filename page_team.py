@@ -770,7 +770,7 @@ def sort_status(persons, status) :
         if person["status"].startswith(sub):
           out.append(person)
       except AttributeError:
-        print "***", person['prenom'] , person['nom']
+        sys.stderr.write( person['prenom'] +" "+ person['nom'] )
   return out
   
 phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
