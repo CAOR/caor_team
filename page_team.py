@@ -705,7 +705,19 @@ phd_cand = [
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }
 ]
-inter = []
+inter = [
+  {
+    u'nom' : u'LOMBARD',
+    u'prenom' : u'Augustin',
+    u'status' : u'Stagiaires',
+    u'mail' : u'augustin.lombard@mines-paristech.fr',
+    u'tel' : u' 01.40.51.92.60',
+    u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/augustin-lombard',
+    u'site' : u'',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
+    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
+  }  
+]
 from jinja2 import Template
 def make_section(name,persons):
   since = get_fr_to_en(u'depuis')
