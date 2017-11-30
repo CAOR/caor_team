@@ -709,7 +709,7 @@ inter = [
   {
     u'nom' : u'LOMBARD',
     u'prenom' : u'Augustin',
-    u'status' : u'Stagiaires',
+    u'status' : u'Stagiaire',
     u'mail' : u'augustin.lombard@mines-paristech.fr',
     u'tel' : u' 01.40.51.92.60',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/augustin-lombard',
