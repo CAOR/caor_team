@@ -30,7 +30,7 @@ def get_fr_to_en(status):
     elif status == u"technicien"                : return u"Technician"
     elif status == u"doctorante"                : return u"PhD Candidate"
     elif status == u"doctorant"                 : return u"PhD Candidate"
-    elif status == u"stagiaire"                 : return u"Internships"
+    elif status == u"stagiaire"                 : return u"Internship"
     elif status == u"direction"                 : return u"Management"
     elif status == u"enseignants-chercheurs"    : return u"Academic Staff"
     elif status == u"chercheurs"                : return u"Research Staff"
