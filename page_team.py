@@ -222,7 +222,7 @@ teacher = [
     u'prenom' : u'Cyril',
     u'status' : u'Maître de conférences',
     u'mail' : u'cyril.joly@mines-paristech.fr',
-    u'tel' : u'+33140519327',
+    u'tel' : u'+33140519028',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/cyril-joly',
     u'site' : u'',
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/c/cyril.joly.jpg',
