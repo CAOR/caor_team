@@ -92,12 +92,12 @@ admin = [
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom'      : u'Cailloux-Roques',
+    u'nom'      : u'Cailloux',
     u'prenom'   : u'Myriam',
     u'status'   : u'Chargée Adm. Mastère MISL',
-    u'mail'     : u'myriam.cailloux-roques@mines-paristech.fr',
+    u'mail'     : u'myriam.cailloux@mines-paristech.fr',
     u'tel'      : u'+33140519122',
-    u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/myriam-cailloux-roques',
+    u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/myriam-cailloux',
     u'photo'    : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'site'     : u'',  u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }
