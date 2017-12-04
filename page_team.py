@@ -716,6 +716,17 @@ inter = [
     u'site' : u'',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
+  }  ,
+  {
+    u'nom' : u'SENTERI',
+    u'prenom' : u'Gavriela',
+    u'status' : u'Stagiaire',
+    u'mail' : u'gavriela.senteri@mines-paristech.fr',
+    u'tel' : u'',
+    u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/gavriela-senteri',
+    u'site' : u'',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
+    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }  
 ]
 from jinja2 import Template
