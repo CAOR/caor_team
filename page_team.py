@@ -718,6 +718,17 @@ inter = [
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }  ,
   {
+    u'nom' : u'SOMAI',
+    u'prenom' : u'Majed',
+    u'status' : u'Stagiaire',
+    u'mail' : u'majed.somai@mines-paristech.fr',
+    u'tel' : u'',
+    u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/majed-somai',
+    u'site' : u'',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
+    u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
+  } ,
+  {
     u'nom' : u'SENTERI',
     u'prenom' : u'Gavriela',
     u'status' : u'Stagiaire',
