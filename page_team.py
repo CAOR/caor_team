@@ -218,7 +218,7 @@ teacher = [
     u'linkedin' : u'https://www.linkedin.com/in/bogdan-stanciulescu-5239012/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
-    u'nom' : u'Joly 周熙瑞',
+    u'nom' : u'Joly (周熙瑞)',
     u'prenom' : u'Cyril',
     u'status' : u'Maître de conférences',
     u'mail' : u'cyril.joly@mines-paristech.fr',
