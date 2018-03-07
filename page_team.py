@@ -488,7 +488,7 @@ phd_cand = [
     u'tel' : u'+33140519350',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/florent-altche',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/f/florent.altche.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Bouchiba',
