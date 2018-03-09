@@ -477,7 +477,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/marin-toromanof',
     u'site' : u'',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/marin.toromanoff.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'Altché',
