@@ -57,6 +57,7 @@ admin = [
     u'status' : u'Prof., Resp. Enseignement',
     u'mail' : u'brigitte.dandrea-novel@mines-paristech.fr',
     u'tel' : u'+33140519094',
+    u'sex' : u"female",
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/brigitte-dandrea-novel',
     u'site' : u'http://people.mines-paristech.fr/brigitte.dandrea-novel/PDEs-Control-and-Music.html',
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/b/brigitte.dandrea-novel.jpg',
@@ -79,6 +80,7 @@ admin = [
     u'tel' : u'+33140519255',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/christine-vignaud',
     u'site' : u'',
+    u'sex' : u"female",
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/c/christine.vignaud.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   },
@@ -97,6 +99,7 @@ admin = [
     u'status'   : u'Chargée Adm. Mastère MISL',
     u'mail'     : u'myriam.cailloux@mines-paristech.fr',
     u'tel'      : u'+33140519122',
+    u'sex'      : u"female",
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/myriam-cailloux',
     u'photo'    : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'site'     : u'',  u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
@@ -291,6 +294,7 @@ searcher = [
     u'tel' : u'01.40.51.92.97',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/alina-glushkova',
     u'site' : u'',
+    u'sex' : u"female",
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
@@ -411,6 +415,7 @@ phd_cand = [
     u'mail' : u'michelle.valente@mines-paristech.fr',
     u'tel' : u'01.40.51.93.50',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/michelle-valente',
+    u'sex' : u"female",
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u'', u'site' : u''
     },
@@ -433,6 +438,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/laetitia-li',
     u'site' : u'',
+    u'sex' : u"female",
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
@@ -621,6 +627,7 @@ phd_cand = [
     u'tel' : u'+33140519454',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/claire-nicodeme',
     u'site' : u'',
+    u'sex' : u"female",
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
@@ -632,6 +639,7 @@ phd_cand = [
     u'tel' : u'N/A',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/imane-mahtout',
     u'site' : u'',
+    u'sex' : u"female",
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
@@ -643,6 +651,7 @@ phd_cand = [
     u'tel' : u'+33140519439',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/marion-pilte',
     u'site' : u'',
+    u'sex' : u"female",
     u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/marion.pilte.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
@@ -736,11 +745,35 @@ inter = [
     u'tel' : u'',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/gavriela-senteri',
     u'site' : u'',
+    u'sex' : u"female",
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''
   }  
 ]
 from jinja2 import Template
+
+import unidecode
+import urllib.request
+
+def convert_name(name) :
+  name = unidecode.unidecode(name)
+  name = name.replace(" ","_")
+  name = name.replace("'","")
+  return name
+  
+def get_url_photo(person) :
+  prenom = convert_name(person['prenom'])
+  nom = convert_name(person['nom'])
+  url="http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/" + prenom[0]+"/" + prenom+"."+nom+".jpg"
+  data = str(urllib.request.urlopen(url))
+  if data.startswith('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">') : 
+    if 'sex' in person and person['sex'] == "female":
+        return "http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png"
+    else : 
+        return "http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png"
+  else :
+    return url
+  
 def make_section(name,persons):
   since = get_fr_to_en(u'depuis')
   for person in persons:
@@ -749,6 +782,8 @@ def make_section(name,persons):
     if u"D'" in nom: nom = nom.replace(u"D'",u"d'")
     person[u'nom'] = nom
     person[u'status'] = get_fr_to_en(person[u'status'])
+    person[u'photo'] = get_url_photo(person)
+    print(person[u'photo'])
     # sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
   template = Template( """
   <div class="section_big_title"> <h1><span> {{name_section}}</span></h1>
@@ -819,9 +854,9 @@ data = OrderedDict([("DIRECTION"              , admin      ),
                     ("STAGIAIRES"             , inter      )])
 
 out = print_header()
-for name, persons in data.iteritems():
+for name, persons in data.items():
   if len(persons) != 0:
     out += make_section(get_fr_to_en(name),persons)
 out += print_footer()
 
-print out.encode('utf8')
+print(out.encode('utf8'))
