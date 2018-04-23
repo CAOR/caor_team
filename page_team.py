@@ -271,7 +271,8 @@ searcher = [
     u'tel' : u'+33140519028',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/tony-noel',
     u'site' : u'',
-    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/t/tony.noel.jpg',
+    #u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/t/tony.noel.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'BOUKHRIS',
