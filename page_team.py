@@ -142,7 +142,7 @@ teacher = [
     u'tel' : u'+33140519119',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/silvere-bonnabel',
     u'site' : u'http://www.silvere-bonnabel.com/',
-    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/s/silvere.bonnabel.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2018/08/silvere.bonnabel.jpg',
     u'linkedin' : u'',u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
     u'nom' : u'ROSIER',
