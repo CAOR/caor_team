@@ -248,7 +248,7 @@ searcher = [
     u'tel' : u'+33140519169',
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/sotiris-manitsaris',
     u'site' : u'',
-    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/s/sotiris.manitsaris.jpg',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/Sotiris-Manitsaris.jpg',
     u'linkedin' : u'https://www.linkedin.com/in/sotirismanitsaris/',
     u'bitbucket' : u'',u'github' : u'',u'vimeo' : u''},
   {
