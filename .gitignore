@@ -1,1 +1,5 @@
 .idea/
+debug.log
+costum_person.pyc
+persons.json
+chromedriver.exe
