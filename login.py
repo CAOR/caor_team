@@ -3,6 +3,10 @@ from selenium import webdriver
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
 import getpass
+import json
+from agefromname import AgeFromName
+
+age_from_name = AgeFromName()
 
 userStr = input("Votre username :")
 passwordStr = getpass.getpass("votre password:")
@@ -33,7 +37,8 @@ for r,row in enumerate(table.find_elements_by_xpath('.//tr')):
         continue
         
     cols = row.find_elements_by_xpath('.//th')
-    if cols[5].get_attribute('innerHTML') == 'eleve' :
+    type = cols[5].get_attribute('innerHTML')
+    if type == 'eleve' or type == 'vacataire' :
         continue
         
     Uid = cols[1].find_element_by_xpath('.//a')
@@ -60,10 +65,21 @@ for i,person in enumerate(persons):
         key = cols[0].find_element_by_xpath('.//label').get_attribute('innerHTML')
         value = cols[1].find_element_by_xpath('.//label').get_attribute('innerHTML')
         persons[i][key] = value
+        
+    prenom = persons[i]["givenName:"]
+    prob = age_from_name.prob_male(prenom, minimum_age=20, maximum_age=70 )
+    print("prob(",prenom,")=====>",prob)
+    if prob > 0.4 :
+        prenom = persons[i]["sex_estimation"] = "male"
+    else :
+        prenom = persons[i]["sex_estimation"] = "female"
     
     print(persons[i])
 
-# browser.close()
+with open('persons.json', 'w') as outfile:
+    json.dump(persons, outfile)
+    
+browser.close()
 
 
 
