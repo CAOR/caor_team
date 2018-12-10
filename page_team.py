@@ -3,14 +3,15 @@
 from collections import OrderedDict
 import sys
 from jinja2 import Template
-from costum_person import *
+from utils import *
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--lang', type=str, default="FR", help='language FR or EN')
+opt = parser.parse_args()
+lang = opt.lang
 
 sys.stdout.flush()
-
-if len(sys.argv) < 2:
-  lang = 'FR'
-else:
-  lang = sys.argv[1]
 
 def get_fr_to_en(status):
   if lang == 'FR': return status
@@ -23,6 +24,7 @@ def get_fr_to_en(status):
     elif status == u"assistant"                 : return u"Assistant Manager"
     elif status == u"chargée adm. mastère misl" : return u"MISL Assistant Manager"
     elif status == u"professeur"                : return u"Professor"
+    elif 'hdr' in status                        : return u"Associate Professor"
     elif status == u"maître de conférences"     : return u"Associate Professor"
     elif status == u"post-doctorante"           : return u"Postdoctoral Associate"
     elif status == u"post-doctorant"            : return u"Postdoctoral Associate"
@@ -110,6 +112,8 @@ def sort_status(persons, status) :
         sys.stderr.write( person['prenom'] +" "+ person['nom'] )
   return out
   
+    
+  
 phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
 teacher  = sort_status(teacher,[u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
 searcher = sort_status(searcher,[u"Chargé", u"Ingénieur", "Post", u"Chercheu"])
@@ -122,9 +126,21 @@ data = OrderedDict([("DIRECTION"              , admin      ),
                     ("STAGIAIRES"             , inter      )])
 
 out = print_header()
-for name, persons in data.iteritems():
+
+
+for name, persons in iter(data.items()): # data.iteritems():
   if len(persons) != 0:
     out += make_section(get_fr_to_en(name),persons)
 out += print_footer()
+# print(out.encode('utf8'))
 
-print out.encode('utf8')
+# print(out.encode('utf8'))
+import codecs
+
+if lang == 'FR':
+    file = codecs.open("page_fr.txt", "w", "utf-8")
+else :
+    file = codecs.open("page_en.txt", "w", "utf-8")
+
+file.write(out)
+file.close()

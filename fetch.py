@@ -77,8 +77,8 @@ for i,person in enumerate(persons):
     print(persons[i])
 
 with open('persons.json', 'w') as outfile:
-    json.dump(persons, outfile)
-    
+    json.dump(persons, outfile,indent=4)
+
 browser.close()
 
 

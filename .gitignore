@@ -3,3 +3,4 @@ debug.log
 costum_person.pyc
 persons.json
 chromedriver.exe
+__pycache__/
