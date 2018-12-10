@@ -55,6 +55,33 @@ def make_section(name,persons):
     person[u'nom'] = nom
     person[u'status'] = get_fr_to_en(person[u'status'])
     # sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
+    out = '<div class="section_big_title"> <h1><span> {{name_section}}</span></h1>'
+    out +='</div> <div class="container"> <div class="row"> <div class="sixteen columns">'
+    for p in persons : 
+        out += '<div class="four columns omega"> <div class="team_block_content"><div class="pic">'
+        out += '<img src="'+p['photo']+'" style="margin-left:14px;margin-right:14px">'
+        out += '<div class="team_block"> <h4>'+p['prenom']+' '+p['nom']+'</h4>'
+        if p['status'] == 'Doctorant' or p['status'] == 'Doctorante' or p['status'] == 'PhD Candidate' :
+            out += '<p class="team_desc">'+p['status']+' '+since+' '+p['promo']+' </p> <p class="team_text">'
+        else : 
+            out += '<p class="team_desc">'+p['status']+'</p> <p class="team_text">'
+        out += '<a href="mailto:'+p['mail']+'" title="'+p['mail']+'"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;'
+        if 'tel' in p.keys() and p['tel'] != '' and p['tel'] != 'N/A':
+            out += '<a href="tel:"'+p['tel']+'"><i class="fa fa-phone" title="'+p['tel']+'"></i></a> &nbsp;&nbsp;'
+        if 'annuaire' in p.keys() and p['annuaire'] != '' :
+            out += '<a href="'+p['annuaire']+'" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;'
+        if 'site' in p.keys() and p['site'] != '':
+            out += '<a href="'+p['site']+'" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp;'
+        if 'linkedin' in p.keys() and p['linkedin'] != '':
+            out += '<a href="'+p['linkedin']+'" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp;'
+        if 'bitbucket' in p.keys() and p['bitbucket'] != '':
+            out += '<a href="'+p['bitbucket']+'" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp;'
+        if 'github' in p.keys() and p['github'] != '':
+            out += '<a href="'+p['github']+'" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp;'
+        if 'vimeo' in p.keys() and p['vimeo'] != '':
+            out += '<a href="'+p['vimeo']+'" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp;'
+        out += '</p> </div> </div> </div> </div>'
+    out += '</div> </div> </div>'
   template = Template( """
   <div class="section_big_title"> <h1><span> {{name_section}}</span></h1>
   </div> <div class="container"> <div class="row"> <div class="sixteen columns">
@@ -79,8 +106,8 @@ def make_section(name,persons):
   {% endfor %} 
   </div> </div> </div>
   """)
-  out = template.render(name_section=name, people=persons, depuis=since)
-  out = out.replace("\n    ","")
+  #out = template.render(name_section=name, people=persons, depuis=since)
+  #out = out.replace("\n    ","")
   return out
 
 def print_header() :
