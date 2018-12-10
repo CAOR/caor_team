@@ -38,20 +38,15 @@ additional_person = [
     u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/lionel-rosier',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/Lionel.Rosier.jpg',
     u'categorie' : 'teacher'
-  },
-  {
-    u'nom' : u'Fayolle',
-    u'prenom' : u'Guy',
-    u'mail' : u'guy.fayolle@mines-paristech.fr',
-    u'status' : u'Chercheur Associé',
-    u'sex' : u'male',
-    u'annuaire' : u'http://www.mines-paristech.fr/Services/Annuaire/guy-fayolle',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png',
-    u'categorie' : u'searcher'
   }
 ]
     
 costum_person = [
+  {
+    u'mail' : u'guy.fayolle@mines-paristech.fr',
+    u'status' : u'Chercheur Associé',
+    u'categorie' : u'searcher'
+  },
   { u'mail' : u'arnaud.de_la_fortelle@mines-paristech.fr',
     u'status' : u'Professeur, Directeur',
     u'linkedin' : u'https://www.linkedin.com/in/arnaud-de-la-fortelle-353ba15/',
