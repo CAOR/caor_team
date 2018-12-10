@@ -60,7 +60,7 @@ def make_section(name,persons):
         out += '<div class="four columns omega"> <div class="team_block_content"><div class="pic">'
         out += '<img src="'+p['photo']+'" style="margin-left:14px;margin-right:14px">'
         out += '<div class="team_block"> <h4>'+p['prenom']+' '+p['nom']+'</h4>'
-        if 'doctorant' in p['status'].lower():
+        if 'doctorant' in p['status'].lower() and not 'post' in p['status'].lower():
             out += '<p class="team_desc">'+status+' '+since+' '+p['promo']+' </p> <p class="team_text">'
         else : 
             out += '<p class="team_desc">'+status+'</p> <p class="team_text">'
