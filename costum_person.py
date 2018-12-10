@@ -224,5 +224,9 @@ costum_person = [
     u"prenom" : u"Grégoire",
     u'nom' : u"D. Dinechin",
     u'mail' : u'gregoire.dupont_de_dinechin@mines-paristech.fr',
-  }  
+  },
+  {
+    u'mail' : u'marin.toromanoff@mines-paristech.fr',
+    u'sex' : u"male",
+  }    
 ]

@@ -1,53 +1,4 @@
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <style> .team_block_content .pic img { border-radius: 5%; } 
-    /* Tooltip container */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-    }
-
-    /* Tooltip text */
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      padding: 5px 0;
-      border-radius: 6px;
-
-      /* Position the tooltip text */
-      position: absolute;
-      z-index: 1;
-      bottom: 125%;
-      left: 50%;
-      margin-left: -60px;
-
-      /* Fade in tooltip */
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    /* Tooltip arrow */
-    .tooltip .tooltiptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #555 transparent transparent transparent;
-    }
-
-    /* Show the tooltip text when you mouse over the tooltip container */
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-    </style>
-    
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"><style> .team_block_content .pic img { border-radius: 5%; }</style>
 
 <div class="section_big_title"> <h1><span> DIRECTION</span></h1></div> <div class="container"> <div class="row"> <div class="sixteen columns"><div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/arnaud.de_la_fortelle.jpg" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Arnaud de La Fortelle</h4><p class="team_desc">Professeur, Directeur</p> <p class="team_text"><a href="mailto:arnaud.de_la_fortelle@mines-paristech.fr" title="arnaud.de_la_fortelle@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="tel:"01.40.51.94.08"><i class="fa fa-phone" title="01.40.51.94.08"></i></a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/arnaud-de-la-fortelle" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;<a href="https://www.linkedin.com/in/arnaud-de-la-fortelle-353ba15/" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
 <div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/arthur.gaudron.jpg" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Arthur Gaudron</h4><p class="team_desc">Resp. de Projets</p> <p class="team_text"><a href="mailto:arthur.gaudron@mines-paristech.fr" title="arthur.gaudron@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="tel:"01.40.51.91.27"><i class="fa fa-phone" title="01.40.51.91.27"></i></a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/arthur-gaudron" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
@@ -117,7 +68,7 @@
 <div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/g/gregoire.dupont_de_dinechin.jpg" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Grégoire D. Dinechin</h4><p class="team_desc">Doctorant depuis 2017 </p> <p class="team_text"><a href="mailto:gregoire.dupont_de_dinechin@mines-paristech.fr" title="gregoire.dupont_de_dinechin@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/gregoire-dupont-de-dinechin" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
 <div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Imane Mahtout</h4><p class="team_desc">Doctorante depuis 2017 </p> <p class="team_text"><a href="mailto:imane.mahtout@mines-paristech.fr" title="imane.mahtout@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/imane-mahtout" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
 <div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-male.png" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>David Tobar</h4><p class="team_desc">Doctorant depuis 2017 </p> <p class="team_text"><a href="mailto:david.tobar@mines-paristech.fr" title="david.tobar@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="tel:"01.40.51.92.60"><i class="fa fa-phone" title="01.40.51.92.60"></i></a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/david-tobar" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
-<div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/marin.toromanoff.jpg" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Marin Toromanoff</h4><p class="team_desc">Doctorante depuis 2017 </p> <p class="team_text"><a href="mailto:marin.toromanoff@mines-paristech.fr" title="marin.toromanoff@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/marin-toromanoff" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
+<div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/marin.toromanoff.jpg" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Marin Toromanoff</h4><p class="team_desc">Doctorant depuis 2017 </p> <p class="team_text"><a href="mailto:marin.toromanoff@mines-paristech.fr" title="marin.toromanoff@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/marin-toromanoff" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
 <div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Salwa El Kaddaoui</h4><p class="team_desc">Doctorante depuis 2018 </p> <p class="team_text"><a href="mailto:salwa.el_kaddaoui@mines-paristech.fr" title="salwa.el_kaddaoui@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="tel:"01.40.51.94.36"><i class="fa fa-phone" title="01.40.51.94.36"></i></a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/salwa-el-kaddaoui" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
 </div> </div> </div><div class="section_big_title"> <h1><span> STAGIAIRES</span></h1></div> <div class="container"> <div class="row"> <div class="sixteen columns"><div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Gavriela Senteri</h4><p class="team_desc">Stagiaire</p> <p class="team_text"><a href="mailto:gavriela.senteri@mines-paristech.fr" title="gavriela.senteri@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/gavriela-senteri" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>
 <div class="four columns omega"> <div class="team_block_content"><div class="pic"><img src="http://caor-mines-paristech.fr/wp-content/uploads/2013/10/silhouette-female.png" style="margin-left:14px;margin-right:14px"><div class="team_block"> <h4>Salma Benslimane</h4><p class="team_desc">Stagiaire</p> <p class="team_text"><a href="mailto:salma.benslimane@mines-paristech.fr" title="salma.benslimane@mines-paristech.fr"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;<a href="http://www.mines-paristech.fr/Services/Annuaire/salma-benslimane" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;</p> </div> </div> </div> </div>

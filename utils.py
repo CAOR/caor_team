@@ -82,7 +82,7 @@ def merge_list(persons,cpersons):
         if p['formation:'] =="": final_p[i]['promo'] = ""
         else : 
             final_p[i]['promo'] = str(2000+int(p['formation:']))
-            print(final_p[i]['nom'],final_p[i]['promo'])
+            # print(final_p[i]['nom'],final_p[i]['promo'])
         
         # Update TEL
         final_p[i]['tel'] = re.sub("[\[\]]",'',final_p[i]['telephoneNumber:'])         
@@ -108,8 +108,8 @@ def merge_list(persons,cpersons):
         if not 'annuaire' in p.keys() :
             final_p[i]['annuaire'] = 'http://www.mines-paristech.fr/Services/Annuaire/'+ p['Uid'].replace('_','-').replace('.','-')
         
-        if 'claire.nicodeme@mines-paristech.fr' == p['mail'].lower():
-            print(json.dumps(final_p[i],indent=4))
+        # if 'claire.nicodeme@mines-paristech.fr' == p['mail'].lower():
+            # print(json.dumps(final_p[i],indent=4))
     return final_p
 
 persons = load("persons.json")
