@@ -2,7 +2,6 @@
 
 from collections import OrderedDict
 import sys
-from jinja2 import Template
 from utils import *
 import argparse
 
@@ -55,7 +54,7 @@ def make_section(name,persons):
     person[u'nom'] = nom
     person[u'status'] = get_fr_to_en(person[u'status'])
     # sys.stderr.write(person['prenom'] +" "+person['nom'] + "\n")
-    out = '<div class="section_big_title"> <h1><span> {{name_section}}</span></h1>'
+    out = '<div class="section_big_title"> <h1><span> '+name+'</span></h1>'
     out +='</div> <div class="container"> <div class="row"> <div class="sixteen columns">'
     for p in persons : 
         out += '<div class="four columns omega"> <div class="team_block_content"><div class="pic">'
@@ -82,31 +81,6 @@ def make_section(name,persons):
             out += '<a href="'+p['vimeo']+'" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp;'
         out += '</p> </div> </div> </div> </div>'
     out += '</div> </div> </div>'
-  template = Template( """
-  <div class="section_big_title"> <h1><span> {{name_section}}</span></h1>
-  </div> <div class="container"> <div class="row"> <div class="sixteen columns">
-  {% for person in people %}
-    <div class="four columns omega"> <div class="team_block_content"><div class="pic">
-    <img src="{{person.photo}}" style="margin-left:14px;margin-right:14px">
-    <div class="team_block"> <h4>{{person.prenom}} {{person.nom}}</h4>
-    {% if person.status == 'Doctorant' or person.status == 'Doctorante' or person.status == 'PhD Candidate' %} 
-      <p class="team_desc">{{person.status}} {{depuis}} {{person.promo}} </p> <p class="team_text">
-    {% else %}
-      <p class="team_desc">{{person.status}}</p> <p class="team_text">
-    {% endif %}
-    <a href="mailto:{{person.mail}}" title="{{person.mail}}"> <i class="fa fa-envelope-o"></i> </a> &nbsp;&nbsp;
-    {% if person.tel != '' and person.tel != 'N/A' %} <a href="tel:{{person.tel}}"><i class="fa fa-phone" title="{{person.tel}}"></i></a> &nbsp;&nbsp;{% endif %}
-    {% if person.annuaire != '' %} <a href="{{person.annuaire}}" target="_blank"><i class="fa fa-user"></i></a> &nbsp;&nbsp;{% endif %}
-    {% if person.site != ''%} <a href="{{person.site}}" target="_blank"><i class="fa fa-home"></i></a> &nbsp;&nbsp;{% endif %}
-    {% if person.linkedin != '' %} <a href="{{person.linkedin}}" target="_blank"><i class="fa fa-linkedin-square"></i></a> &nbsp;&nbsp;{% endif %}
-    {% if person.bitbucket != '' %} <a href="{{person.bitbucket}}" target="_blank"><i class="fa fa-bitbucket-square"></i></a> &nbsp;&nbsp;{% endif %}
-    {% if person.github != '' %} <a href="{{person.github}}" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp;{% endif %}
-    {% if person.vimeo != '' %} <a href="{{person.vimeo}}" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp;{% endif %}
-    </p> </div> </div> </div> </div>
-  {% endfor %} 
-  </div> </div> </div>
-  """)
-  #out = template.render(name_section=name, people=persons, depuis=since)
   #out = out.replace("\n    ","")
   return out
 
