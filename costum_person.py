@@ -228,5 +228,10 @@ costum_person = [
   {
     u'mail' : u'marin.toromanoff@mines-paristech.fr',
     u'sex' : u"male",
-  }    
+  },
+  {
+    'prenom':'Martin',
+    'mail':'martin.dubreuil@mines-paristech.fr'
+  }
+  
 ]
