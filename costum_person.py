@@ -219,7 +219,15 @@ costum_person = [
     u'categorie' : u'technicians'
   },
   {
+    u"prenom" : u"Brenda. E",
+    u'nom' : u"Olivas .P",
     u'mail' : u'brenda-elizabeth.olivas_padilla@mines-paristech.fr',
     u"sex" : u"female"
-  }
+
+  },
+  {
+    u"prenom" : u"Grégoire",
+    u'nom' : u"D. Dinechin",
+    u'mail' : u'gregoire.dupont_de_dinechin@mines-paristech.fr',
+  }  
 ]

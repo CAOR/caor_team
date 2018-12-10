@@ -1,4 +1,4 @@
 pip install Jinja2
-python page_team.py FR > page_fr.txt
-python page_team.py EN > page_en.txt
+python page_team.py --lang FR 
+python page_team.py --lang EN 
 PAUSE
