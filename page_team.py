@@ -80,7 +80,7 @@ def make_section(name,persons):
         if 'vimeo' in p.keys() and p['vimeo'] != '':
             out += '<a href="'+p['vimeo']+'" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp;'
         if 'room' in p.keys() and p['room'] != '':
-            out += '<div class="tooltip"><i class="fa fa-desktop"></i><span class="tooltiptext">'+p['room']+'</span></div>'
+            out += '<i class="fa fa-desktop"><div class="tooltip"><span class="tooltiptext">'+p['room']+'</span></div></i>'
             # out += '<a href="'+p['room']+'" target="_blank"><i class="fa fa-desktop"></i></a> &nbsp;&nbsp;'
         out += '</p> </div> </div> </div> </div>\n'
     out += '</div> </div> </div>'
