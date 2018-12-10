@@ -79,6 +79,8 @@ def make_section(name,persons):
             out += '<a href="'+p['github']+'" target="_blank"><i class="fa fa-github-square"></i></a> &nbsp;&nbsp;'
         if 'vimeo' in p.keys() and p['vimeo'] != '':
             out += '<a href="'+p['vimeo']+'" target="_blank"><i class="fa fa-vimeo-square"></i></a> &nbsp;&nbsp;'
+        if 'room' in p.keys() and p['room'] != '':
+            out += '<a href="'+p['room']+'" target="_blank"><i class="fa fa-desktop"></i></a> &nbsp;&nbsp;'
         out += '</p> </div> </div> </div> </div>\n'
     out += '</div> </div> </div>'
     #out = out.replace("\n    ","")
