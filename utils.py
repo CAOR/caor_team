@@ -38,9 +38,12 @@ def get_status(person) :
         if u"ingénieu" in status.lower() :
             if person['sex'] == 'male' : return u"Ingénieur R&D"
             else: return u"Ingénieure R&D"
-        if u"post" in status.lower() and u"doctorant" in status.lower():
+        elif u"post" in status.lower() and u"doctorant" in status.lower():
             if person['sex'] == 'male' : return u"Post-Doctorant"
             else: return u"Post-Doctorante"
+        elif u"doctorant" in status.lower() :
+            if person['sex'] == 'male' : return 'Doctorant'
+            else : return 'Doctorante'
         return status
 
 def get_categorie_by_status(status):
@@ -77,7 +80,9 @@ def merge_list(persons,cpersons):
         
         # Update PROMOTION if PHD_CANDIDATE
         if p['formation:'] =="": final_p[i]['promo'] = ""
-        else : final_p[i]['promo'] = str(2000+int(p['formation:']))
+        else : 
+            final_p[i]['promo'] = str(2000+int(p['formation:']))
+            print(final_p[i]['nom'],final_p[i]['promo'])
         
         # Update TEL
         final_p[i]['tel'] = re.sub("[\[\]]",'',final_p[i]['telephoneNumber:'])         
@@ -103,8 +108,8 @@ def merge_list(persons,cpersons):
         if not 'annuaire' in p.keys() :
             final_p[i]['annuaire'] = 'http://www.mines-paristech.fr/Services/Annuaire/'+ p['Uid'].replace('_','-').replace('.','-')
         
-        # if 'lushkova' in p['nom'].lower():
-        # print(json.dumps(final_p[i],indent=4))
+        if 'claire.nicodeme@mines-paristech.fr' == p['mail'].lower():
+            print(json.dumps(final_p[i],indent=4))
     return final_p
 
 persons = load("persons.json")

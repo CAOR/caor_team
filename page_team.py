@@ -55,12 +55,12 @@ def make_section(name,persons):
         if u"De "in nom: nom = nom.replace(u"De ",u"de ")
         if u"D'" in nom: nom = nom.replace(u"D'",u"d'")
         p[u'nom'] = nom
-        status = get_fr_to_en(p[u'status'])
+        status = get_fr_to_en(p['status'])
 
         out += '<div class="four columns omega"> <div class="team_block_content"><div class="pic">'
         out += '<img src="'+p['photo']+'" style="margin-left:14px;margin-right:14px">'
         out += '<div class="team_block"> <h4>'+p['prenom']+' '+p['nom']+'</h4>'
-        if status == 'Doctorant' or status == 'Doctorante' or status == 'PhD Candidate' :
+        if 'doctorant' in p['status'].lower():
             out += '<p class="team_desc">'+status+' '+since+' '+p['promo']+' </p> <p class="team_text">'
         else : 
             out += '<p class="team_desc">'+status+'</p> <p class="team_text">'
