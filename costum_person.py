@@ -56,7 +56,7 @@ costum_person = [
     u'mail' : u'brigitte.dandrea-novel@mines-paristech.fr',
     u'status' : u'Prof., Resp. Enseignement',
     u'site' : u'http://people.mines-paristech.fr/brigitte.dandrea-novel/PDEs-Control-and-Music.html',
-    u'categorie' : 'admin'
+    u'categorie' : 'teacher'
   },
   { u'mail' : u'arthur.gaudron@mines-paristech.fr',
     u'status' : u'Resp. de Projets',
@@ -89,7 +89,7 @@ costum_person = [
     u'site' : u'http://perso.mines-paristech.fr/fabien.moutarde',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/fabien.moutarde.jpg',
     u'linkedin' : u'https://www.linkedin.com/in/fabien-moutarde-b9990bb/',
-    u'categorie' : 'teacher'
+    u'categorie' : 'admin'
   },
   {
     u'mail' : u'silvere.bonnabel@mines-paristech.fr',

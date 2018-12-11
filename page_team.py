@@ -106,11 +106,13 @@ def print_footer() :
 
 def sort_status(persons, status) :
     persons = sorted(persons, key=lambda d: (d[u'nom'].lower()))
+    for person in persons:person['free'] = True
     out = []
     for sub in status :
         for person in persons:
             try:
-                if sub in person["status"]:
+                if sub in person["status"] and person['free']:
+                    person['free'] = False
                     out.append(person)
             except AttributeError:
                 sys.stderr.write( person['prenom'] +" "+ person['nom'] )
@@ -119,8 +121,9 @@ def sort_status(persons, status) :
     
   
 phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
-teacher  = sort_status(teacher,[u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
+teacher  = sort_status(teacher,[u"Resp. Enseignement",u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
 searcher = sort_status(searcher,[u"Chargé", u"Ingénieur", "Post", u"Chercheu"])
+admin = sort_status(admin,[u"Directeur","Prof", "Projet", u"Assistant","MISL"])
 
 data = OrderedDict([("DIRECTION"              , admin      ),
                     ("ENSEIGNANTS-CHERCHEURS" , teacher    ),
