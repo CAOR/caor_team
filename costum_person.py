@@ -177,11 +177,11 @@ costum_person = [
     u'status' : u'Post-Doctorant',
     u'categorie' : u'searcher'
   },
-  # {
-    # u'mail' : u'alina.glushkova@mines-paristech.fr',
-    # u'status' : u'Post-Doctorante',
-    # u'categorie' : u'searcher'
-  # },
+  {
+    u'mail' : u'alina.glushkova@mines-paristech.fr',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/alina.glushkova.jpg',
+    u'categorie' : u'searcher'
+  },
   {
     u'mail' : u'patrick.callet@mines-paristech.fr',
     u'status' : u'Chercheur Associé',
