@@ -17,7 +17,8 @@ def get_fr_to_en(status):
     else :
         status = status.lower()
         if   status == u"professeur, directeur"     : return u"Professor, Director"
-        elif status == u"prof., resp. enseignement" : return u"Professor, Deputy Director"
+        elif status == u"prof., directeur adjoint"  : return u"Professor, Deputy Director"
+        elif status == u"prof., resp. enseignement" : return u"Professor"
         elif status == u"resp. de projets"          : return u"Project Manager"
         elif status == u"assistante"                : return u"Assistant Manager"
         elif status == u"assistant"                 : return u"Assistant Manager"

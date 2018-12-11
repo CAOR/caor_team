@@ -86,6 +86,7 @@ costum_person = [
   },
   {
     u'mail' : u'fabien.moutarde@mines-paristech.fr',
+    u'status' : u'Prof., Directeur Adjoint',
     u'site' : u'http://perso.mines-paristech.fr/fabien.moutarde',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/fabien.moutarde.jpg',
     u'linkedin' : u'https://www.linkedin.com/in/fabien-moutarde-b9990bb/',
