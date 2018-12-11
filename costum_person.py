@@ -231,8 +231,9 @@ costum_person = [
     u'sex' : u"male",
   },
   {
-    'prenom':'Martin',
-    'mail':'martin.dubreuil@mines-paristech.fr'
+    'prenom': 'Martin',
+    'mail'  : 'martin.dubreuil@mines-paristech.fr',
+    'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/martin.dubreuil.jpg'
   }
   
 ]
