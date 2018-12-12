@@ -236,6 +236,10 @@ costum_person = [
     'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/martin.dubreuil.jpg'
   },
   {
+    'mail'  : 'emmanuel.moisan@mines-paristech.fr',
+    'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/e/emmanuel.moisan.jpg'
+  },
+  {
     'mail'  : 'michelle.valente@mines-paristech.fr',
     'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/michelle.valente.jpg'
   }  
