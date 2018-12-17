@@ -179,7 +179,6 @@ costum_person = [
   },
   {
     u'mail' : u'alina.glushkova@mines-paristech.fr',
-    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/a/alina.glushkova.jpg',
     u'categorie' : u'searcher'
   },
   {
@@ -233,20 +232,10 @@ costum_person = [
   {
     'prenom': 'Martin',
     'mail'  : 'martin.dubreuil@mines-paristech.fr',
-    'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/martin.dubreuil.jpg'
-  },
-  {
-    'mail'  : 'emmanuel.moisan@mines-paristech.fr',
-    'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/e/emmanuel.moisan.jpg'
   },
   {
     'prenom'  : u'Laëtitia',
     'mail'  : 'laetitia.li@mines-paristech.fr',
-    'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/l/laetitia.li.jpg'
   },  
-  {
-    'mail'  : 'michelle.valente@mines-paristech.fr',
-    'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/michelle.valente.jpg'
-  }  
   
 ]
