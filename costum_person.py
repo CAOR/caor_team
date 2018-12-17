@@ -240,6 +240,11 @@ costum_person = [
     'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/e/emmanuel.moisan.jpg'
   },
   {
+    'prenom'  : u'Laëtitia',
+    'mail'  : 'laetitia.li@mines-paristech.fr',
+    'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/l/laetitia.li.jpg'
+  },  
+  {
     'mail'  : 'michelle.valente@mines-paristech.fr',
     'photo' : 'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/m/michelle.valente.jpg'
   }  
