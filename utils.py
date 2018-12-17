@@ -35,15 +35,15 @@ def get_status(person) :
             if person['sex'] == 'male' : return 'Doctorant'
             else : return 'Doctorante'
     else : 
-        if u"ingénieu" in status.lower() :
-            if person['sex'] == 'male' : return u"Ingénieur R&D"
-            else: return u"Ingénieure R&D"
-        elif u"post" in status.lower() and u"doctorant" in status.lower():
+        if u"post" in status.lower() and u"doctorant" in status.lower():
             if person['sex'] == 'male' : return u"Post-Doctorant"
             else: return u"Post-Doctorante"
         elif u"doctorant" in status.lower() :
             if person['sex'] == 'male' : return 'Doctorant'
             else : return 'Doctorante'
+        elif u"ingénieu" in status.lower() :
+            if person['sex'] == 'male' : return u"Ingénieur R&D"
+            else: return u"Ingénieure R&D"
         return status
 
 def get_categorie_by_status(status):
