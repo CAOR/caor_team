@@ -217,8 +217,8 @@ costum_person = [
     u"prenom" : u"Brenda.E",
     u'nom' : u"Olivas.P",
     u'mail' : u'brenda-elizabeth.olivas_padilla@mines-paristech.fr',
+    u'photo' : u'http://www.mines-paristech.fr/Annuaire/PersonnesPhotos/b/brenda-elizabeth.olivas_padilla.jpg',
     u"sex" : u"female"
-
   },
   {
     u"prenom" : u"Grégoire",
@@ -236,6 +236,6 @@ costum_person = [
   {
     'prenom'  : u'Laëtitia',
     'mail'  : 'laetitia.li@mines-paristech.fr',
-  },  
+  }
   
 ]
