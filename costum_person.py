@@ -234,6 +234,19 @@ costum_person = [
     'mail'  : 'martin.dubreuil@mines-paristech.fr',
   },
   {
+    'mail' : 'marion.pilte@mines-paristech.fr',
+    "sex"  : "female"
+  },
+  {
+    'mail' : 'daniele.sportillo@mines-paristech.fr',
+    "sex"  : "male"
+  },
+  {
+    'mail' : 'yeongyu.choi@mines-paristech.fr',
+    u'categorie' : u'phd_cand',
+    u'status' : u'Stage Doctoral',
+  },
+  {
     'prenom'  : u'Laëtitia',
     'mail'  : 'laetitia.li@mines-paristech.fr',
   }

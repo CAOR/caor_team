@@ -42,6 +42,7 @@ def get_fr_to_en(status):
         elif status == u"techniciens"               : return u"Technicians"
         elif status == u"doctorants"                : return u"PhD Candidates"
         elif status == u"stagiaires"                : return u"Internships"
+        elif status == u"stage doctoral"            : return u"PhD Internship"
         elif status == u"depuis"                    : return u"since"
         else : return "ERRROORORRR"
 
