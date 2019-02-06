@@ -108,7 +108,7 @@ def print_footer() :
     return out
 
 def sort_status(persons, status) :
-    persons = sorted(persons, key=lambda d: (d[u'nom'].lower()))
+    persons = sorted(persons, key=lambda d: ("Andréa" if 'Novel' in d[u'nom'] else d[u'nom'].lower()))
     for person in persons:person['free'] = True
     out = []
     for sub in status :
