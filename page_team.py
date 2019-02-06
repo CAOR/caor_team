@@ -106,9 +106,17 @@ def print_footer() :
     out += '<div class="counter_desc">Membres</div>'
     out += '</div></div></div></div>'
     return out
-
+    
+   
 def sort_status(persons, status) :
-    persons = sorted(persons, key=lambda d: ("Andréa" if 'Novel' in d[u'nom'] else d[u'nom'].lower()))
+    def cmp_name(x):
+        particul = ["d'",'de ','la ']
+        name = x['nom'].lower()
+        for p in particul:
+            if p in name:
+                name = name.replace(p,"")
+        return name
+    persons = sorted(persons, key=cmp_name)
     for person in persons:person['free'] = True
     out = []
     for sub in status :
