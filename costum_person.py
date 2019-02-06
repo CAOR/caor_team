@@ -54,7 +54,7 @@ costum_person = [
     },
   { u'nom' : u"d'Andréa-Novel",
     u'mail' : u'brigitte.dandrea-novel@mines-paristech.fr',
-    u'status' : u'Chercheur Associé',
+    u'status' : u'Chercheuse Associée',
     u'site' : u'http://people.mines-paristech.fr/brigitte.dandrea-novel/PDEs-Control-and-Music.html',
     u'categorie' : 'searcher'
   },

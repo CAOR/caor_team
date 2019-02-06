@@ -32,6 +32,7 @@ def get_fr_to_en(status):
         elif status == u"ingénieure r&d"            : return u"R&D Engineer"
         elif status == u"ingénieur r&d"             : return u"R&D Engineer"
         elif status == u"chercheur associé"         : return u"Associate Researcher"
+        elif status == u"chercheuse associée"       : return u"Associate Researcher"
         elif status == u"technicien"                : return u"Technician"
         elif status == u"doctorante"                : return u"PhD Candidate"
         elif status == u"doctorant"                 : return u"PhD Candidate"
