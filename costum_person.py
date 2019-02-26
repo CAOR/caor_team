@@ -233,6 +233,7 @@ costum_person = [
   {
     'prenom': 'Martin',
     'mail'  : 'martin.dubreuil@mines-paristech.fr',
+    'linkedin': 'http://www.linkedin.com/in/martin-dubreuil-a08514151'
   },
   {
     'mail' : 'marion.pilte@mines-paristech.fr',
