@@ -119,6 +119,7 @@ costum_person = [
   },
   {
     u'mail' : u'alexis.paljic@mines-paristech.fr',
+    u'photo': u'http://caor-mines-paristech.fr/wp-content/uploads/2019/05/alexis.paljic.jpg',
     u'status' : u'Maître de Conférences, HDR',
     u"sex" : "male",
     u'site' : u'http://caor-mines-paristech.fr/personal-webpages/alexis-paljic/',
