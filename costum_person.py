@@ -290,6 +290,6 @@ remove_persons = [
   { u'mail' : u'hugues.thomas@mines-paristech.fr' },
   { u'mail' : u'michelle.valente@mines-paristech.fr' },
   { u'mail' : u'aubrey.clausse@mines-paristech.fr' },
-  { u'mail' : u'richi.kumar@mines-paristech.fr' },
+  { u'mail' : u'ayush-kumar.rai@mines-paristech.fr' },
 ]
 
