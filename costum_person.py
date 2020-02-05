@@ -107,6 +107,13 @@ costum_person = [
     u'categorie' : 'teacher'
   },
   {
+    #'prenom'  : u'Kelly',
+    u'mail'  : u'hsiu-wen.chang_joly@mines-paristech.fr',
+    u"sex"  : u"female",
+    u'status' : u'Maître de Conférences',
+    u'categorie' : 'teacher'
+  },    
+  {
     u'mail' : u'jean-emmanuel.deschaud@mines-paristech.fr',
     u'status' : u'Maître de Conférences',
     u'linkedin' : u'https://www.linkedin.com/in/jean-emmanuel-deschaud-14aba42/',
@@ -151,13 +158,6 @@ costum_person = [
     u'categorie' : 'teacher'
   },
   {
-    u'status' : u'Chargé de Recherche',
-    u'mail' : u'sotiris.manitsaris@mines-paristech.fr',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/Sotiris-Manitsaris.jpg',
-    u'linkedin' : u'https://www.linkedin.com/in/sotirismanitsaris/',
-    u'categorie' : u'searcher'
-  },
-  {
     u'mail' : u'amaury.breheret@mines-paristech.fr',
     u'nom' : u'Bréhéret',
     u'status' : u'Ingénieur R&D',
@@ -191,17 +191,17 @@ costum_person = [
   },
   {
     u'mail' : u'thomas.muller@mines-paristech.fr',
-    u'status' : u'Chercheur Associé',
+    u'status' : u'Collaborateur extérieur',
     u'categorie' : u'searcher'
   },
   {
     u'mail' : u'fawzi.nashashibi@mines-paristech.fr',
-    u'status' : u'Chercheur Associé',
+    u'status' : u'Collaborateur extérieur',
     u'categorie' : u'searcher'
   },
   {
     u'mail' : u'philippe.porral@mines-paristech.fr',
-    u'status' : u'Chercheur Associé',
+    u'status' : u'Collaborateur extérieur',
     u'categorie' : u'searcher'
   },
   {
@@ -252,6 +252,44 @@ costum_person = [
   {
     'prenom'  : u'Laëtitia',
     'mail'  : 'laetitia.li@mines-paristech.fr',
-  }
-  
+  },
+  {
+    u'mail' : u'gavriela.senteri@mines-paristech.fr',
+    u'status' : u'Ingénieure R&D',
+    u'categorie' : u'searcher'
+  },
+  {
+    u'mail' : u'dimitris.makrygiannis@mines-paristech.fr',
+    u'status' : u'Ingénieur R&D',
+    u'categorie' : u'searcher'
+  },  
+  {
+    u'mail' : u'ioanna.thanou@mines-paristech.fr',
+    u'status' : u'Chargée Adm. Mastère AIMove',
+    u'categorie' : u'admin'
+  },    
+  {
+    u'status' : u'Resp. Projets R&D, MS AIMove',
+    u'mail' : u'sotiris.manitsaris@mines-paristech.fr',
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/Sotiris-Manitsaris.jpg',
+    u'linkedin' : u'https://www.linkedin.com/in/sotirismanitsaris/',
+    u'categorie' : u'searcher'
+  },  
 ]
+
+remove_persons = [
+  { u'mail' : u'philippe.fuchs@mines-paristech.fr'},
+  { u'mail' : u'simon.tamayo@mines-paristech.fr' },
+  { u'mail' : u'angie.nguyen@mines-paristech.fr' },
+  { u'mail' : u'lionel.rosier@mines-paristech.fr' },
+  { u'mail' : u'martin.dubreuil@mines-paristech.fr' },
+  { u'mail' : u'michel.fliess@polytechnique.edu' },
+  { u'mail' : u'lghani.menhour@univ-reims.fr' },
+  { u'mail' : u'yannick.jacob@mines-paristech.fr' },
+  { u'mail' : u'mathieu.nowakowski@mines-paristech.fr' },
+  { u'mail' : u'hugues.thomas@mines-paristech.fr' },
+  { u'mail' : u'michelle.valente@mines-paristech.fr' },
+  { u'mail' : u'aubrey.clausse@mines-paristech.fr' },
+  { u'mail' : u'richi.kumar@mines-paristech.fr' },
+]
+

@@ -2,54 +2,20 @@
 
 from collections import OrderedDict
 import sys
-from utils import *
 import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--lang', type=str, default="FR", help='language FR or EN')
 opt = parser.parse_args()
 lang = opt.lang
-
 sys.stdout.flush()
 
-def get_fr_to_en(status):
-    if lang == 'FR': return status
-    else :
-        status = status.lower()
-        if   status == u"professeur, directeur"     : return u"Professor, Director"
-        elif status == u"prof., directeur adjoint"  : return u"Professor, Deputy Director"
-        elif status == u"prof., resp. enseignement" : return u"Professor"
-        elif status == u"resp. de projets"          : return u"Project Manager"
-        elif status == u"assistante"                : return u"Assistant Manager"
-        elif status == u"assistant"                 : return u"Assistant Manager"
-        elif status == u"chargée adm. mastère misl" : return u"MISL Assistant Manager"
-        elif status == u"professeur"                : return u"Professor"
-        elif 'hdr' in status                        : return u"Associate Professor"
-        elif status == u"maître de conférences"     : return u"Associate Professor"
-        elif status == u"post-doctorante"           : return u"Postdoctoral Associate"
-        elif status == u"post-doctorant"            : return u"Postdoctoral Associate"
-        elif status == u"chargé de recherche"       : return u"Research Manager"
-        elif status == u"ingénieure r&d"            : return u"R&D Engineer"
-        elif status == u"ingénieur r&d"             : return u"R&D Engineer"
-        elif status == u"chercheur associé"         : return u"Associate Researcher"
-        elif status == u"chercheuse associée"       : return u"Associate Researcher"
-        elif status == u"technicien"                : return u"Technician"
-        elif status == u"doctorante"                : return u"PhD Candidate"
-        elif status == u"doctorant"                 : return u"PhD Candidate"
-        elif status == u"stagiaire"                 : return u"Internship"
-        elif status == u"direction"                 : return u"Management"
-        elif status == u"enseignants-chercheurs"    : return u"Academic Staff"
-        elif status == u"chercheurs"                : return u"Research Staff"
-        elif status == u"techniciens"               : return u"Technicians"
-        elif status == u"doctorants"                : return u"PhD Candidates"
-        elif status == u"stagiaires"                : return u"Internships"
-        elif status == u"stage doctoral"            : return u"PhD Internship"
-        elif status == u"depuis"                    : return u"since"
-        else : return "ERRROORORRR"
+from utils import *
+
 
 
 def make_section(name,persons):
-    since = get_fr_to_en(u'depuis')
+    since = get_fr_to_en(u'depuis',lang)
     # print(name)
     out = '<div class="section_big_title"> <h1><span> '+name+'</span></h1>'
     out +='</div> <div class="container"> <div class="row"> <div class="sixteen columns">'
@@ -58,7 +24,7 @@ def make_section(name,persons):
         if u"De "in nom: nom = nom.replace(u"De ",u"de ")
         if u"D'" in nom: nom = nom.replace(u"D'",u"d'")
         p[u'nom'] = nom
-        status = get_fr_to_en(p['status'])
+        status = get_fr_to_en(p['status'],lang)
 
         out += '<div class="four columns omega"> <div class="team_block_content"><div class="pic">'
         out += '<img src="'+p['photo']+'" style="margin-left:14px;margin-right:14px">'
@@ -107,34 +73,6 @@ def print_footer() :
     out += '</div></div></div></div>'
     return out
     
-   
-def sort_status(persons, status) :
-    def cmp_name(x):
-        particul = ["d'",'de ','la ']
-        name = x['nom'].lower()
-        for p in particul:
-            if p in name:
-                name = name.replace(p,"")
-        return name
-    persons = sorted(persons, key=cmp_name)
-    for person in persons:person['free'] = True
-    out = []
-    for sub in status :
-        for person in persons:
-            try:
-                if sub in person["status"] and person['free']:
-                    person['free'] = False
-                    out.append(person)
-            except AttributeError:
-                sys.stderr.write( person['prenom'] +" "+ person['nom'] )
-    return out
-  
-    
-  
-phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
-teacher  = sort_status(teacher,[u"Resp. Enseignement",u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
-searcher = sort_status(searcher,[u"Chargé", u"Ingénieur", "Post", u"Chercheu"])
-admin = sort_status(admin,[u"Directeur","Prof", "Projet", u"Assistant","MISL"])
 
 data = OrderedDict([("DIRECTION"              , admin      ),
                     ("ENSEIGNANTS-CHERCHEURS" , teacher    ),
@@ -148,7 +86,7 @@ out = print_header()
 
 for name, persons in iter(data.items()): # data.iteritems():
     if len(persons) != 0:
-        out += make_section(get_fr_to_en(name),persons)
+        out += make_section(get_fr_to_en(name,lang),persons)
 out += print_footer()
 # print(out.encode('utf8'))
 

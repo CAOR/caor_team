@@ -2,7 +2,45 @@ import json
 from costum_person import *
 import re
 
-
+def get_fr_to_en(status, lang):
+    if lang == 'FR': return status
+    else :
+        status = status.lower()
+        if   status == u"professeur, directeur"     : return u"Professor, Director"
+        elif status == u"prof., directeur adjoint"  : return u"Professor, Deputy Director"
+        elif status == u"prof., resp. enseignement" : return u"Professor"
+        elif status == u"resp. de projets"          : return u"Project Manager"
+        elif status == u"assistante"                : return u"Assistant Manager"
+        elif status == u"assistant"                 : return u"Assistant Manager"
+        elif status == u"chargée adm. mastère misl" : return u"MISL Assistant Manager"
+        elif status == u"chargée adm. mastère aimove": return u"AIMove Assistant Manager"
+        elif status == u"professeur"                : return u"Professor"
+        elif 'hdr' in status                        : return u"Associate Professor"
+        elif status == u"maître de conférences"     : return u"Associate Professor"
+        elif status == u"post-doctorante"           : return u"Postdoctoral Associate"
+        elif status == u"post-doctorant"            : return u"Postdoctoral Associate"
+        elif status == u"chargé de recherche"       : return u"Research Manager"
+        elif status == u"ingénieure r&d"            : return u"R&D Engineer"
+        elif status == u"ingénieur r&d"             : return u"R&D Engineer"
+        elif status == u"chercheur associé"         : return u"Associate Researcher"
+        elif status == u"chercheuse associée"       : return u"Associate Researcher"
+        elif status == u"technicien"                : return u"Technician"
+        elif status == u"doctorante"                : return u"PhD Candidate"
+        elif status == u"doctorant"                 : return u"PhD Candidate"
+        elif status == u"stagiaire"                 : return u"Internship"
+        elif status == u"direction"                 : return u"Management"
+        elif status == u"enseignants-chercheurs"    : return u"Academic Staff"
+        elif status == u"chercheurs"                : return u"Research Staff"
+        elif status == u"techniciens"               : return u"Technicians"
+        elif status == u"doctorants"                : return u"PhD Candidates"
+        elif status == u"stagiaires"                : return u"Internships"
+        elif status == u"stage doctoral"            : return u"PhD Internship"
+        elif status == u"depuis"                    : return u"since"
+        elif status =='resp. projets r&d, ms aimove': return u"R&D Project Leader & Dir. AIMove"
+        elif status ==u'collaborateur extérieur'    : return u'External collaborator'
+        
+        else : return "ERRROORORRR"
+        
 def load(file):
     with open(file) as f:
         return json.load(f)
@@ -67,6 +105,7 @@ def merge_list(persons,cpersons):
             final_p.append(p)        
         else :
             final_p.append(merge_person(p,cperson))  
+            
     # Update list
     for i,p in enumerate(final_p) :
         # Update MAIL
@@ -108,21 +147,54 @@ def merge_list(persons,cpersons):
         if not 'annuaire' in p.keys() :
             final_p[i]['annuaire'] = 'http://www.mines-paristech.fr/Services/Annuaire/'+ p['Uid'].replace('_','-').replace('.','-')
         
-        # if 'claire.nicodeme@mines-paristech.fr' == p['mail'].lower():
-            # print(json.dumps(final_p[i],indent=4))
     return final_p
 
+def remove_person(all, remove) :
+    final = []
+    for p in all :
+        to_remove = False
+        for r in remove: 
+            if p['mail'] == r['mail'] :
+                to_remove = True
+                #print("REMOVED :" , p["mail"], get_fr_to_en(p['status'],'EN') )
+        if to_remove == False :
+            final.append(p)
+    return final
+    
 persons = load("persons.json")
 p_merged = merge_list(persons,costum_person)
 for p in additional_person :
     p_merged.append(p)
     # print(p["mail"], p['status'] )
-   
+
+p_merged = remove_person(p_merged,remove_persons)
+            
 def get_by_categorie(persons,categorie) :
     out = []
     for p in persons:
         if p['categorie'] == categorie:
             out.append(p)
+    return out
+    
+def sort_status(persons, status) :
+    def cmp_name(x):
+        particul = ["d'",'de ','la ']
+        name = x['nom'].lower()
+        for p in particul:
+            if p in name:
+                name = name.replace(p,"")
+        return name
+    persons = sorted(persons, key=cmp_name)
+    for person in persons:person['free'] = True
+    out = []
+    for sub in status :
+        for person in persons:
+            try:
+                if sub in person["status"] and person['free']:
+                    person['free'] = False
+                    out.append(person)
+            except AttributeError:
+                sys.stderr.write( person['prenom'] +" "+ person['nom'] )
     return out
 
 admin        = get_by_categorie(p_merged,'admin')
@@ -131,7 +203,12 @@ searcher     = get_by_categorie(p_merged,'searcher')
 technicians  = get_by_categorie(p_merged,'technicians')
 phd_cand     = get_by_categorie(p_merged,'phd_cand')
 inter        = get_by_categorie(p_merged,'inter')
-    
+
+phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
+teacher  = sort_status(teacher,[u"Resp. Enseignement",u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
+searcher = sort_status(searcher,[u"Res", u"Ingénieur", "Post", u"Chercheu", "Collaborateur"])
+admin = sort_status(admin,[u"Directeur","Prof", "Projet", u"Assistant","MISL","AIMove"])
+
 # for p in teacher :
     # if p['status'].lower().startswith('doctorant') :
     # print(p["mail"], p['status'])
