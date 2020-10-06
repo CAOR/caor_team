@@ -13,7 +13,9 @@ def get_fr_to_en(status, lang):
         elif status == u"assistante"                : return u"Assistant Manager"
         elif status == u"assistant"                 : return u"Assistant Manager"
         elif status == u"chargée adm. mastère misl" : return u"MISL Assistant Manager"
+        elif status == u"chargé adm. mastère misl"   : return u"MISL Assistant Manager"       
         elif status == u"chargée adm. mastère aimove": return u"AIMove Assistant Manager"
+        elif status == u"chargé adm. mastère aimove": return u"AIMove Assistant Manager"
         elif status == u"professeur"                : return u"Professor"
         elif 'hdr' in status                        : return u"Associate Professor"
         elif status == u"maître de conférences"     : return u"Associate Professor"
@@ -91,6 +93,8 @@ def get_categorie_by_status(status):
         return 'searcher'
     elif "chercheu" in status.lower():
         return 'searcher'
+    elif "iamove" in status.lower():
+        return 'searcher'
     elif "stagiaire" in status.lower():
         return 'inter'
     else : #if "doctorant" in status.lower():
@@ -126,11 +130,15 @@ def merge_list(persons,cpersons):
         # Update TEL
         final_p[i]['tel'] = re.sub("[\[\]]",'',final_p[i]['telephoneNumber:'])         
         
+        
         # Update CATEGORIE
         if not 'categorie' in p.keys() :
+            print("------------------- ",final_p[i]['mail'] )
             final_p[i]['categorie'] = get_categorie_by_status(final_p[i]["status"])
             # print(p["mail"], p["status"], ">>>>",final_p[i]['categorie'])
 
+        
+        
         # Update Photo
         if not 'photo' in p.keys() :
             if final_p[i]['urlphoto:'] == "":
@@ -165,7 +173,7 @@ def remove_ext(persons):
     out = []
     for p in persons:
         if p['type'] == 'exterieur' or p['employeeType:'] == 'exterieur':
-            pass
+            print(p['nom'])
         else:
             out.append(p)
     return out
@@ -180,8 +188,6 @@ for p in additional_person :
     # print(p["mail"], p['status'] )
 
 p_merged = remove_person(p_merged,remove_persons)
-
-
             
 def get_by_categorie(persons,categorie) :
     out = []
@@ -218,15 +224,23 @@ technicians  = get_by_categorie(p_merged,'technicians')
 phd_cand     = get_by_categorie(p_merged,'phd_cand')
 inter        = get_by_categorie(p_merged,'inter')
 
+
 phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
 teacher  = sort_status(teacher,[u"Resp. Enseignement",u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
 searcher = sort_status(searcher,[u"Res", u"Ingénieur", "Post", u"Chercheu", "Collaborateur"])
 admin = sort_status(admin,[u"Directeur","Prof", "Projet", u"Assistant","MISL","AIMove"])
 
-# for p in teacher :
-    # if p['status'].lower().startswith('doctorant') :
-    # print(p["mail"], p['status'])
+for p in p_merged:
+    print(" ALL ---> ",p["mail"], p['categorie'])
 
+for p in teacher :
+    print(" teacher ---> ",p["mail"], p['status'])
+
+for p in searcher :
+    print(" searcher ---> ",p["mail"], p['status'])
+
+for p in phd_cand :
+    print(" phd_cand ---> ",p["mail"], p['status'])
         
         
         
