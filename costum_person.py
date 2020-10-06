@@ -275,6 +275,13 @@ costum_person = [
     u'linkedin' : u'https://www.linkedin.com/in/sotirismanitsaris/',
     u'categorie' : u'searcher'
   },  
+  {
+    u'status' : u'Chargé Adm. Mastère AIMove',
+    u'mail' : u'raphael.menegaldo@mines-paristech.fr',
+    u'linkedin' : u'https://www.linkedin.com/in/rapha%C3%ABl-menegaldo-86990714/',
+    u'categorie' : u'searcher'
+  },    
+  
 ]
 
 remove_persons = [

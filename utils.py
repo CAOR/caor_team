@@ -161,13 +161,27 @@ def remove_person(all, remove) :
             final.append(p)
     return final
     
+def remove_ext(persons):
+    out = []
+    for p in persons:
+        if p['type'] == 'exterieur' or p['employeeType:'] == 'exterieur':
+            pass
+        else:
+            out.append(p)
+    return out
+    
+    
 persons = load("persons.json")
+persons = remove_ext(persons)
+
 p_merged = merge_list(persons,costum_person)
 for p in additional_person :
     p_merged.append(p)
     # print(p["mail"], p['status'] )
 
 p_merged = remove_person(p_merged,remove_persons)
+
+
             
 def get_by_categorie(persons,categorie) :
     out = []
