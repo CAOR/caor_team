@@ -171,6 +171,7 @@ costum_person = [
     u'mail' : u'sascha.hornauer@mines-paristech.fr',
     u'nom' : u'Hornauer',
     u'status' : u'Ingénieur R&D',
+    u"sex" : u"male",
     u'categorie' : u'searcher'
   },
   {
