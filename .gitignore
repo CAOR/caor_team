@@ -4,3 +4,4 @@ costum_person.pyc
 persons.json
 chromedriver.exe
 __pycache__/
+env/
