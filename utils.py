@@ -8,6 +8,7 @@ def get_fr_to_en(status, lang):
         status = status.lower()
         if   status == u"professeur, directeur"     : return u"Professor, Director"
         elif status == u"prof., directeur adjoint"  : return u"Professor, Deputy Director"
+        elif status == u"directeur adjoint"              : return u"Deputy Director"
         elif status == u"prof., resp. enseignement" : return u"Professor"
         elif status == u"resp. de projets"          : return u"Project Manager"
         elif status == u"assistante"                : return u"Assistant Manager"
@@ -228,7 +229,7 @@ inter        = get_by_categorie(p_merged,'inter')
 phd_cand = sorted(phd_cand, key=lambda d: (d[u'promo'],d[u'nom']), reverse=False)
 teacher  = sort_status(teacher,[u"Resp. Enseignement",u"Prof", u"HDR", u"Maître", u"Tenure", u"Post"])
 searcher = sort_status(searcher,[u"Res", u"Ingénieur", "Post", u"Chercheu", "Collaborateur"])
-admin = sort_status(admin,[u"Directeur","Prof", "Projet", u"Assistant","MISL","AIMove"])
+admin = sort_status(admin,[u"Professeur, Directeur",u"Directeur Adjoint","Prof", "Projet", u"Assistant","MISL","AIMove"])
 
 for p in p_merged:
     print(" ALL ---> ",p["mail"], p['categorie'])
