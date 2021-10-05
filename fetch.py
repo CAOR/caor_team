@@ -1,4 +1,6 @@
+import time
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
@@ -6,13 +8,16 @@ import getpass
 import json
 from agefromname import AgeFromName
 
+
 age_from_name = AgeFromName()
 
 userStr = input("Votre username :")
 passwordStr = getpass.getpass("votre password:")
 
 browser = webdriver.Chrome()
-browser.get('https://auth.mines-paristech.fr/cas/login')
+#browser.get('https://auth.mines-paristech.fr/cas/login')
+browser.get('https://auth-par.mines-paristech.fr/cas/login?service=https%3A%2F%2Fldap-ihm.mines-paristech.fr%2Fninja%2Findex.jsp')
+time.sleep(2)
 
 username = browser.find_element_by_id('username')
 username.send_keys(userStr)
@@ -20,13 +25,18 @@ username.send_keys(userStr)
 password = browser.find_element_by_id('password')
 password.send_keys(passwordStr)
 
-signInButton = browser.find_element_by_class_name('btn-submit')
-signInButton.click()
+#signInButton = browser.find_element_by_class_name('btn-submit')
+#signInButton = browser.find_element_by_class_name('mdc-button mdc-button--raised')
+#signInButton.click()
+password.send_keys(Keys.RETURN)
+time.sleep(2)
 
 URL = "https://tom.mines-paristech.fr:8443/ninja/index.jsp"
 browser.get(URL)
 
-URL = "https://tom.mines-paristech.fr:8443/ninja/pages/listPersons!listPersons.action?personUid=amaury.breheret"
+#URL = "https://tom.mines-paristech.fr:8443/ninja/pages/listPersons!listPersons.action?personUid=amaury.breheret"
+
+URL ="https://ldap-ihm.minesparis.psl.eu/ninja/pages/listPersons!listPersons.action?personUid=amaury.breheret"
 browser.get(URL)
 
 table = browser.find_element_by_xpath('//*[@id="form"]/table/tbody')
