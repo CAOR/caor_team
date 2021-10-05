@@ -48,9 +48,9 @@ costum_person = [
     u'categorie' : u'searcher'
   },
   { u'mail' : u'arnaud.de_la_fortelle@mines-paristech.fr',
-    u'status' : u'Professeur, Directeur',
+    u'status' : u'Professeur',
     u'linkedin' : u'https://www.linkedin.com/in/arnaud-de-la-fortelle-353ba15/',
-    u'categorie' : 'admin'
+    u'categorie' : 'teacher'
     },
   { u'nom' : u"d'Andréa-Novel",
     u'mail' : u'brigitte.dandrea-novel@mines-paristech.fr',
@@ -82,16 +82,24 @@ costum_person = [
   },
   {
     u'mail' : u'francois.goulette@mines-paristech.fr',
+    #u'status' : u'Professeur',
     u'categorie' : 'teacher'
   },
   {
     u'mail' : u'fabien.moutarde@mines-paristech.fr',
-    u'status' : u'Prof., Directeur Adjoint',
+    u'status' : u'Professeur, Directeur',
     u'site' : u'http://perso.mines-paristech.fr/fabien.moutarde',
     u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/fabien.moutarde.jpg',
     u'linkedin' : u'https://www.linkedin.com/in/fabien-moutarde-b9990bb/',
     u'categorie' : 'admin'
   },
+  {
+    u'mail' : u'sotiris.manitsaris@mines-paristech.fr',
+    u'status' : u'Directeur Adjoint',#Resp. Projets R&D, MS AIMove
+    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/Sotiris-Manitsaris.jpg',
+    u'linkedin' : u'https://www.linkedin.com/in/sotirismanitsaris/',
+    u'categorie' : u'admin'
+  },   
   {
     u'mail' : u'silvere.bonnabel@mines-paristech.fr',
     u'site' : u'http://www.silvere-bonnabel.com/',
@@ -115,7 +123,7 @@ costum_person = [
   },    
   {
     u'mail' : u'jean-emmanuel.deschaud@mines-paristech.fr',
-    u'status' : u'Maître de Conférences',
+    u'status' : u'Maître de Conférences, HDR',
     u'linkedin' : u'https://www.linkedin.com/in/jean-emmanuel-deschaud-14aba42/',
     u'categorie' : 'teacher'
   },
@@ -274,14 +282,7 @@ costum_person = [
     u'mail' : u'ioanna.thanou@mines-paristech.fr',
     u'status' : u'Chargée Adm. Mastère AIMove',
     u'categorie' : u'admin'
-  },    
-  {
-    u'status' : u'Resp. Projets R&D, MS AIMove',
-    u'mail' : u'sotiris.manitsaris@mines-paristech.fr',
-    u'photo' : u'http://caor-mines-paristech.fr/wp-content/uploads/2013/10/Sotiris-Manitsaris.jpg',
-    u'linkedin' : u'https://www.linkedin.com/in/sotirismanitsaris/',
-    u'categorie' : u'searcher'
-  },  
+  },     
   {
     u'status' : u'Chargé Adm. Mastère AIMove',
     u'mail' : u'raphael.menegaldo@mines-paristech.fr',
